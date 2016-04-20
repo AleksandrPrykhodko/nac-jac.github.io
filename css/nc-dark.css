@@ -1,0 +1,217 @@
+/**
+*****************************************************************
+* PROJECT : NC-Attract Coming-Soon Page
+* AUTHOR : NCodeArt
+*****************************************************************
+*/
+
+/**
+*****************************************************************
+* This file is licensed to NCodeArt.
+* it's not allowed to copy or reuse it Copyright NCodeArt 2015
+*****************************************************************
+*/
+
+
+/**
+*******************************************************************
+* INTRODUCTION
+*******************************************************************
+
+
+*******************************************************************/
+
+/**
+*******************************************************************
+* GLOBAL
+*******************************************************************
+*/
+
+body { color: #fff; }
+.bt-menu.bt-menu-open { background-color: rgba(255,255,255,0.3); }
+.bt-menu { border-color: #000; }
+#page-wrapper { background-color: rgba(0,0,0,0.85); }
+
+
+/**
+*****************************************************************
+*	TYPOGRAPHY
+*****************************************************************
+*/
+
+/*----------  H-TAG  ----------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hd-1,
+.hd-2,
+.hd-3,
+.hd-4,
+.hd-5,
+.hd-6 {
+	color: #fff;
+}
+
+
+/*----------  TITLE  ----------*/
+.title .hd,
+.title .icon {
+	color: #BA7A1A;
+}
+.title hr { border-color: rgba(255,255,255,0.2); }
+
+
+/**
+*******************************************************************
+* PAGE-LOADER
+*******************************************************************
+*/
+
+
+/*----------  PAGE-LOADER-1  ----------*/
+.page-loader-wrapper-1 { background-color: #000; }
+.stick1, 
+.stick2, 
+.stick3, 
+.stick4 {
+	background-color: #fff;
+}
+
+
+/**
+*******************************************************************
+* NAVIGATION
+*******************************************************************
+*/
+
+.bt-menu-open .bt-menu-trigger span:before,
+.bt-menu-open .bt-menu-trigger span:after { background-color: #fff; }
+/*----------  NAVIGATION-1  ----------*/
+.navigatio-wrp-1 .navlink { color: #fff; }
+.navigatio-wrp-1 .navigation > li:first-child .navlink, 
+.navigatio-wrp-1 .navlink {
+	border-color: rgba(255,255,255,0.1);
+}
+.navigatio-wrp-1 .navlink:hover { background-color: #fff; color: #000; }
+.navigatio-wrp-1 .navlink .nc-tooltip { color: #fff; background-color: #000; }
+.nc-tooltip-wrp .nc-tooltip .dir { color: #000; }
+
+
+/**
+*****************************************************************
+*	COUNTDOWN
+*****************************************************************
+*/
+
+/*----------  CLOCK-1  ----------*/
+.clock.clock-1 { background-color: rgba(255,255,255,0.05); }
+.countdown-widget .dash { border-color: rgba(255,255,255,0.1); }
+.clock.clock-1 .countdown-widget .dash_title { color: rgba(255,255,255,0.5); }
+
+
+/**
+*****************************************************************
+*	SUBSCRIBE FORM
+*****************************************************************
+*/
+
+.subscribe-form .btn { color: rgba(255,255,255,1); }
+.subscribe-form .btn:hover { background-color: #fff; color: rgba(0,0,0,1); }
+.subscribe-form .form-control::-webkit-input-placeholder{color: rgba(255,255,255,0.3);}
+.subscribe-form .form-control:-moz-placeholder{color: rgba(255,255,255,0.3);}
+.subscribe-form .form-control::-moz-placeholder{color: rgba(255,255,255,0.3);}
+.subscribe-form .form-control:-ms-input-placeholder{color: rgba(255,255,255,0.3);}
+
+/*----------  SUBSCRIBE-FORM-1  ----------*/
+.subscribe-form-1 .form-control { color: #fff; border-color: rgba(255,255,255,0.1); }
+.subscribe-form-1 .form-control:focus { border-color: rgba(255,255,255,1); }
+
+
+/**
+*******************************************************************
+* SOCIAL-LINKS
+*******************************************************************
+*/
+
+/*----------  SOCIAL-LINKS-1  ----------*/
+.social-links-1 .links { color: #fff; }
+
+
+/**
+*******************************************************************
+* INFO-BOX
+*******************************************************************
+*/
+
+/*----------  INFO-BOX-3  ----------*/
+.info-box-3 .head { border-color: rgba(255,255,255,0.1); }
+.info-box-3 .head .icon { color: #fff; }
+.info-box-3 .head .hd { color: #fff; }
+.info-box-3 .text p { color: rgba(255,255,255,0.6); }
+
+
+/**
+*******************************************************************
+* TEAM-BOX
+*******************************************************************
+*/
+
+/*----------  TEAM-BOX-1  ----------*/
+.team-box-1 .social-links-1 { background-color: rgba(0,0,0,0.7); }
+.team-box-1 .social-links-1 .links { color: #fff; }
+.team-box-1 .info { border-color: rgba(255,255,255,0.1); }
+.team-box-1 .info .hd { color: #fff; }
+.team-box-1 .info .hr-1 { border-color: rgba(255,255,255,0.1); }
+.team-box-1 .info .small { color: rgba(255,255,255,0.6); }
+.team-box-1 .hvr-sweep-to-bottom:before { background-color: #fff; }
+.team-box-1:hover .info .hd, 
+.team-box-1:hover .info .small {
+	color: #000;
+}
+.team-box-1:hover .info .hr-1 { border-color: rgba(0,0,0,0.2); }
+
+
+/**
+*****************************************************************
+*	CONTACT-BOXS
+*****************************************************************
+*/
+
+/*----------  CONTACT-BOXES-1  ----------*/
+.contact-boxes-1 { background-color: rgba(255,255,255,0.05); }
+.contact-boxes-1 .contact-box-1 { border-color: rgba(255,255,255,0.1); }
+.contact-boxes-1 .contact-box-1:last-child { border-bottom: none; }
+
+
+/**
+*****************************************************************
+*	FORM
+*****************************************************************
+*/
+
+/*----------  FORM-1  ----------*/
+.contact-form .form-control { color: #fff; border-color: rgba(255,255,255,0.1); }
+.contact-form .form-control:focus { border-color: #fff; }
+
+/**
+*****************************************************************
+*	HOME PAGE
+*****************************************************************
+*/
+
+/*----------  HOME-PAGE-1  ----------*/
+.home-page-1 .logo-wrp img { opacity: 1; }
+
+/**
+*****************************************************************
+*	ABOUT-SECTION
+*****************************************************************
+*/
+
+/*----------  ABOUT-SECTION-1  ----------*/
+.about-section-1 .large-text { color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.1); }
+.about-section-1 .list-1 > li { color: rgba(255,255,255,0.6); }
+.about-section-1 .list-1 .icon { color: #fff; }
