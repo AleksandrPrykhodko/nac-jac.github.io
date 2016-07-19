@@ -201,7 +201,7 @@ $message = '
  
 Dear Administrator,
  
-A payment for NAC*JAC ORGANIZER order has been made but is flagged as INVALID.
+A payment for the product order has been made but is flagged as INVALID.
 Please verify the payment manualy and contact the buyer.
 
 Here are the details 

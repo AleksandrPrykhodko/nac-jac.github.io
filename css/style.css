@@ -1,4 +1,4 @@
-                                                                      @charset "UTF-8";
+@charset "UTF-8";
 /* ------------------------------------------------
 
 Page	: Proland CSS
@@ -18,12 +18,12 @@ Surjith S M / @surjithctly
 Table of Content:
 01/ Prefix
 02/ Header
-03/ NAC*JAC ORGANIZER
-04/ How Nac-Jac Organizer Works
+03/ The Product
+04/ How it Works
 05/ The Benefits
 06/ Left Right Content
-07/ ORDER NOW Nac*Jac Organizer System
-08/ ORGANIZER SYSTEM
+07/ Our Collection
+08/ The Watch
 09/ Splt Columns
 10/ Reviews
 11/ FAQs
@@ -1218,7 +1218,7 @@ header.video-bg {
   width: 100%;
 }
 
-/*=========NAC*JAC ORGANIZER==========*/
+/*=========The Product==========*/
 .the-product {
   padding: 110px 0 160px;
 }
@@ -1702,7 +1702,7 @@ header.video-bg {
           transform: scaleY(1);
 }
 
-/*=========How Nac-Jac Organizer Works==========*/
+/*=========How it Works==========*/
 .how-it-works {
   padding: 104px 0 95px;
 }
@@ -1749,9 +1749,9 @@ header.video-bg {
   font: 300 16px/28px "Poppins", sans-serif;
 }
 
-/*=========How Nac-Jac Organizer Works==========*/
+/*=========How it Works==========*/
 .the-benefits {
-  padding: 117px 0;
+  padding: 15px 0;
 }
 
 @media (max-width: 340px) {
@@ -1810,7 +1810,7 @@ header.video-bg {
 
 /*=========Left Right Content==========*/
 .left-right-contents {
-  padding: 111px 0 145px;
+  padding: 4px 0 145px;
 }
 
 .left-right-contents img {
@@ -1877,9 +1877,9 @@ header.video-bg {
   font: 300 14px/22px "Poppins", sans-serif;
 }
 
-/*=========ORDER NOW Nac*Jac Organizer System==========*/
+/*=========Our Collection==========*/
 .our-collection {
-  padding: 140px 0 88px;
+  padding: 15px 0 88px;
 }
 
 .collections {
@@ -1914,7 +1914,7 @@ header.video-bg {
   margin: 14px 0 20px;
 }
 
-/*=========ORGANIZER SYSTEM==========*/
+/*=========The Watch==========*/
 .the-watch {
   padding: 102px 0 94px;
 }
@@ -2178,7 +2178,7 @@ header.video-bg {
 
 /*=========Tech Specs==========*/
 .tech-specs {
-  padding: 78px 0 85px;
+  padding: 5px 0 5px;
 }
 
 .tech-specs-row:first-child {
@@ -2186,9 +2186,9 @@ header.video-bg {
 }
 
 .tech-specs-row .tech-spec {
-  padding: 35px 15px;
+  padding: 5px 15px;
   border-top: 1px solid;
-  min-height: 250px;
+  min-height: 200px;
 }
 
 @media (max-width: 991px) {
@@ -2585,7 +2585,7 @@ header.video-bg {
 
 /*=========Newsletter==========*/
 .newsletter {
-  padding: 96px 0 90px;
+  padding: 5px 0 90px;
 }
 
 .newsletter .section-header {
