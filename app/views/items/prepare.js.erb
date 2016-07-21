@@ -1,0 +1,6 @@
+var old_html = $('.product-info-<%= @id %>').html();
+$('.product-info-<%= @id %>').html('<%= escape_javascript(raw render("form")) %>');
+$('.product-info-<%= @id %> .btn-back').click(function() {
+  $('.product-info-<%= @id %>').html(old_html);
+  return false;
+});

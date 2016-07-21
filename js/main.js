@@ -121,7 +121,7 @@ Surjith S M / @surjithctly
 
                 patterns: {
                     youtube: {
-                        index: 'youtube.com/', // String that detects type of video 
+                        index: 'youtube.com/', // String that detects type of video
 
                         id: 'v=', // String that splits URL in a two parts, second part should be %id%
                         // Or null - full URL will be returned

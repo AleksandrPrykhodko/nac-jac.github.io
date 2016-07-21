@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //= require lib/jquery-2.2.0.min
+//= require jquery_ujs
 //= require lib/bootstrap.min
 //= require owl-carousel/owl.carousel
 //= require magnific-popup/jquery.magnific-popup.min
