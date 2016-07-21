@@ -1,0 +1,12 @@
+//= require lib/jquery-2.2.0.min
+//= require lib/bootstrap.min
+//= require owl-carousel/owl.carousel
+//= require magnific-popup/jquery.magnific-popup.min
+//= require bootstrap-touchspin/jquery.bootstrap-touchspin.min
+//= require bootstrap-select/js/bootstrap-select.min
+//= require plugins/wow.min
+//= require plugins/validate
+//= require includes/pre-order
+//= require includes/subscribe
+//= require includes/contact
+//= require main

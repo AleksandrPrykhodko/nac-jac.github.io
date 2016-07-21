@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+Page    : Home Page
+Version : 1.0
+Author  : Surjith S M
+URI     : http://themeforest.net/user/surjithctly
+
+Copyright © All rights Reserved
+Surjith S M / @surjithctly
+
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--========== Page Ttile ==========-->
+  <title>NAC-JAC - Organizer System - Eliminate stress of searching for items stored in your console..</title>
+
+  <!-- Google Font -->
+  <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
+
+  <!-- CSS Plugin Files -->
+  <%= stylesheet_link_tag "application", debug: true %>
+
+  <!--========== HTML5 shim and Respond.js (Required) ==========-->
+  <!--[if lt IE 9]>
+  <script src="assets/javascripts/lib/html5shiv.min.js"></script>
+  <script src="assets/javascripts/lib/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body class="home" data-scroll-animation="true">
+
+<!--==========Preloader==========-->
+<div id="loading">
+  <div id="loading-center">
+    <div id="loading-center-absolute">
+      <div class="object" id="object_four"></div>
+      <div class="object" id="object_three"></div>
+      <div class="object" id="object_two"></div>
+      <div class="object" id="object_one"></div>
+    </div>
+  </div>
+</div>
+
+<!--==========Header==========-->
+<header class="row" id="header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!--========== Brand and toggle get grouped for better mobile display ==========-->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#header"><%= image_tag('logo.png')%></a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!--========== Collect the nav links, forms, and other content for toggling ==========-->
+      <div class="collapse navbar-collapse" id="main-navbar">
+        <a href="#product-choose" class=" btn btn-warning pull-right hidden-sm hidden-xs">BUY IT NOW</a>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#product">Product</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <!--/*<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="index.html">Pre-order (Email)</a></li>
+                  <li><a href="index_email.html">Email Signup (Mailchimp)</a></li>
+                  <li><a href="index_buy_paypal.html">Buy Now (PayPal)</a></li>
+                  <li><a href="index_kickstarter.html">Kickstarter Campaign</a></li>
+                  <li><a href="index_indegogo.html">Indegogo Campaign</a></li>
+                  <li><a href="index_boxed.html">Boxed Version</a></li>
+                  <li><a href="index_rtl.html">RTL Version</a></li>
+                  <li><a href="index_video.html">Video Background</a></li>
+                  <li class="divider"></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="blog-single.html">Blog Single</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="shortcodes.html">Shortcodes</a></li>
+              </ul>
+          </li>*/-->
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+      <!--========== /.navbar-collapse ==========-->
+    </div>
+    <!--========== /.container-fluid ==========-->
+  </nav>
+
+  <div class="top-banner row m0 text-center fadeInOnLoad">
+    <div class="container">
+      <h2>No More Console Clutter!</h2>
+      <p>Nac*Jac Organizer System - Eliminate stress of searching for items stored in your console.. </p>
+      <a href="#product-choose" class="btn btn-primary btn-lg">BUY WITH PAYPAL</a>
+
+      <!--<div class="row apple-watch">
+          <img src="images/apple-watch.png" alt="" class="watch_img">
+      </div>-->
+    </div>
+  </div>
+</header>
+
+<!--==========The Product==========-->
+
+<section class="row mobile-app">
+  <div class="container" id="product">
+    <div class="row">
+      <div class="col-sm-6 col-sm-push-6 wow fadeIn">
+        <h2>NAC-JAC SYSTEM</h2>
+        <p>IS  PORTABLE SO THE PRODUCT CAN BE IN AUTO / HOME / BUSINESS /SHOP /RVS /TRAVEL TRAILER / BOATS AND  MORE</p>
+        <div class="row m0 downloads-btns">
+          <a href="#" class="dload-link"><%= image_tag('app-store.png')%></a>
+          <a href="#" class="dload-link"><%= image_tag('ford.png')%></a>
+          <a href="#" class="dload-link"><%= image_tag('chevy.png')%></a>
+          <a href="#" class="dload-link"><%= image_tag('gmc.png')%></a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-sm-pull-6 wow fadeInUp">
+        <%= image_tag('app-screen.png', class: 'mobile-img')%>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--==========How its Works==========-->
+<section class="row how-it-works">
+  <div class="container">
+    <div class="row section-header v2 wow fadeInUp">
+      <h2>how it works</h2>
+      <p>Each tray has removable dividers so that you can determine what size items are stored and not only can you store / organize hundreds of items but there are file folders available Also.</p>
+    </div>
+    <div class="row work-processes">
+      <!--==========Work Process==========-->
+      <div class="col-sm-4 work-process wow fadeIn">
+        <div class="row m0 process-icon">
+          <%= image_tag('desktop.png')%>
+        </div>
+        <h3>TRAYS</h3>
+        <p>Items of varying size and shapes can be easily stored and retrieved</p>
+      </div>
+      <!--==========Work Process==========-->
+      <div class="col-sm-4 work-process wow fadeIn" data-wow-delay="0.5s">
+        <div class="row m0 process-icon">
+          <%= image_tag('toggles.png')%>
+        </div>
+        <h3>STACKED TRAYS</h3>
+        <p>Because the Nac-Jac trays stack and lock hundreds of items can be stored in one area</p>
+      </div>
+      <!--==========Work Process==========-->
+      <div class="col-sm-4 work-process wow fadeIn" data-wow-delay="1s">
+        <div class="row m0 process-icon">
+          <%= image_tag('trophy.png')%>
+        </div>
+        <h3>TRYS & FOLDERS</h3>
+        <p>Each tray can be turned while still being stacked to fit in your console whether your console is square rectangular. With the larger console the file folder can sit on either side or Grouped together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--==========The Benefits==========-->
+<section class="row the-benefits" id="features">
+  <div class="container">
+    <div class="row section-header wow fadeInUp">
+      <h2>The Benefits</h2>
+      <p>The Nac-Jac organizer system eliminate stress of seaching for items in your Truck or Suv console storage area and after retrieving it ensures you those items are stored safely from potential Damage or being lost with you determining the size of each compartment</p>
+    </div>
+    <div class="row benefit-notes">
+
+      <!--==========Left Right Content==========-->
+      <section class="row left-right-contents">
+        <div class="container">
+          <div class="row ">
+            <div class="col-sm-12 col-md-4 col-md-push-4 text-center wow fadeIn">
+              <%= image_tag('apple-watch-3.png')%>
+            </div>
+            <div class="col-md-4 col-sm-6 col-md-pull-4 left-content">
+              <div class="media wow fadeInUp">
+                <div class="media-left">
+                  <span><i class="li_key"></i></span>
+                </div>
+                <div class="media-body">
+                  <h4>Durable & secure</h4>
+                  <p>Ensures you those items are stored safely from potential Damage or being lost  </p>
+                </div>
+              </div>
+              <div class="media wow fadeInUp" data-wow-delay="0.3s">
+                <div class="media-left">
+                  <span><i class="li_user"></i></span>
+                </div>
+                <div class="media-body">
+                  <h4>Customize for your Need</h4>
+                  <p>Each tray can be organized towards your needs and wants </p>
+                </div>
+              </div>
+              <div class="media wow fadeInUp" data-wow-delay="0.6s">
+                <div class="media-left">
+                  <span><i class="li_diamond"></i></span>
+                </div>
+                <div class="media-body">
+                  <h4>Light & Potable</h4>
+                  <p>Move your items easily when on the move   </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 right-content">
+              <div class="media wow fadeInUp">
+                <div class="media-left">
+                  <span><i class="li_like"></i></span>
+                </div>
+                <div class="media-body">
+                  <h4>Use any mobile Setting</h4>
+                  <p>Can Be In Auto / Home / Business /shop /rvs /travel Trailer / Boats And  More </p>
+                </div>
+              </div>
+              <div class="media wow fadeInUp" data-wow-delay="0.3s">
+                <div class="media-left">
+                  <span><i class="li_user"></i></span>
+                </div>
+                <div class="media-body">
+                  <h4>Pantent Pending</h4>
+                  <p>Nac-Jac trays stack and lock  </p>
+                </div>
+              </div>
+              <div class="media wow fadeInUp" data-wow-delay="0.6s">
+                <div class="media-left">
+                  <span><i class="li_clock"></i></span>
+                </div>
+                <div class="media-body">
+                  <h4>Made in America</h4>
+                  <p>Invented and manufactured in United States keeping Americans Employed  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==========Our  PRODUCTS==========-->
+      <section class="row our-collection">
+        <div class="container">
+          <div class="row section-header wow fadeInUp">
+            <h2>NAC-JAC PRODUCTS</h2>
+            <p>Please Review our Vehicle Make/Model section to determine quantities for your Pick-Up or SUV </p>
+          </div>
+          <div class="row collections">
+            <!--==========Collection Items==========-->
+            <div class="col-sm-6 col-md-3 item wow fadeIn">
+              <div class="row m0 featured-img">
+                <%= image_tag('collection-1.jpg')%>
+              </div>
+              <h4 class="title">NAC-JAC TRAY</h4>
+              <h5 class="category">---</h5>
+              <h4 class="price">$16.99</h4>
+              <a href="#product-choose" class="btn">CHOOSE</a>
+            </div>
+            <!--==========Collection Items==========-->
+            <div class="col-sm-6 col-md-3 item wow fadeIn" data-wow-delay="0.5s">
+              <div class="row m0 featured-img">
+                <%= image_tag('collection-2.jpg')%>
+              </div>
+              <h4 class="title">NAC-JAC FILE FOLDERS</h4>
+              <h5 class="category">Save &amp; $3.99</h5>
+              <h4 class="price">$16.99 &amp;  OR Two for $30  </h4>
+              <a href="#product-choose" class="btn">CHOOSE</a>
+            </div>
+            <!--==========Collection Items==========-->
+            <!--<div class="col-sm-6 col-md-3 item wow fadeIn" data-wow-delay="1s">
+                <div class="row m0 featured-img">
+                    <img src="images/collection-3.jpg" alt="">
+                </div>
+                <h4 class="title">Watch Original</h4>
+                <h5 class="category">The FirstWatch ever released</h5>
+                <h4 class="price">$249</h4>
+                <a href="#product-choose" class="btn">CHOOSE</a>
+            </div>-->
+            <!--==========Collection Items==========-->
+            <div class="col-sm-6 col-md-3 item wow fadeIn" data-wow-delay="1.5s">
+              <div class="row m0 featured-img">
+                <%= image_tag('collection-4.jpg')%>
+              </div>
+              <h4 class="title">NAC-JAC TRAYS</h4>
+              <h5 class="category">Set of Four --Save $7.99</h5>
+              <h4 class="price">$60</h4>
+              <a href="#product-choose" class="btn">CHOOSE</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==========Tech Specs==========-->
+      <section class="row tech-specs">
+        <div class="container">
+          <div class="row section-header wow fadeInUp">
+            <h2>VEHICLE MAKE/MODEL SELECTION</h2>
+            <p>THE NAC-JAC SYSTEM CAN BE USED IN THE FOLLOWING</p>
+          </div>
+          <!--==========Tech Specs Row==========-->
+          <div class="row tech-specs-row">
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h3>FORDS</h3>
+              <h4></h4>
+              <ul class="nav">
+                <li><h4>Pick-ups</h4></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h3>MODEL & YEAR</h3>
+
+              <ul class="nav">
+                <li>F-50 2003-Current</li>
+                <li>F250 2003-Current</li>
+                <li>F350 2003-Current</li>
+
+              </ul>
+            </div>
+
+
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h3># Of Trays | #File System</h3>
+              <ul class="nav">
+
+                <li>4 Trays---N/A</li>
+                <li>4 Trays--With 2 File Folder</li>
+                <li>4 Trays--With 2 File Folder</li>
+
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4>CHEVROLET</h4>
+              <ul class="nav">
+                <li>PICK-UPS</li>
+                <li>HIGH COUNTRY</li>
+                <li>SUBURBANS</li>
+                <li>TAHOES</li>
+
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4>MODEL & YEAR</h4>
+              <ul class="nav">
+                <li>2003-Current</li>
+                <li>2015-Current</li>
+                <li>2003-Current</li>
+                <li>2003-Current</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4># Of Trays | #File System</h4>
+              <ul class="nav">
+                <li>3 Trays--N/A</li>
+                <li>4 Trays--With 2 File Folders</li>
+                <li>3 Trays</li>
+                <li>3 Trays--N/A</li>
+
+
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4>GMCs</h4>
+              <ul class="nav">
+                <li>PICK UPS</li>
+                <li>YOKONS</li>
+                <li>ESCALADES</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4>MODEL & YEAR</h4>
+              <ul class="nav">
+                <li>2003-Current</li>
+                <li>2003-Current</li>
+                <li>2003-Current</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4># Of Trays | #File System</h4>
+              <ul class="nav">
+                <li>3 Trays--With 2 File Folders</li>
+                <li>3 Trays--N/A</li>
+                <li>3 Trays--N/A</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4>TOYOTAS</h4>
+              <ul class="nav">
+                <li>TACOMA</li>
+                <li>TUNDRA</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="2.1s">
+              <h4>MODEL & YEAR</h4>
+              <ul class="nav">
+                <li>2003-Current</li>
+                <li>2003-Current</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4># Of Trays | #File System</h4>
+              <ul class="nav">
+                <li>3 Trays--N/A</li>
+                <li>4 Trays--With 2 File Folders</li>
+              </ul>
+            </div>
+
+          </div>
+          <!--==========Tech Specs Row==========-->
+          <div class="row tech-specs-row">
+          </div>
+          <!--==========Tech Specs Row==========-->
+          <div class="row tech-specs-row">
+          </div>
+        </div>
+      </section>
+      <!--==========Desclimer==========-->
+      <div class="row section-header wow fadeInUp">
+        <h4>Disclaimer</h4>
+        <p>ALL MAKES/MODELS WITH A FOLD-UP CONSOLE WITH A 3RD FRONT SEAT NAC-JAC WILL NOT WORK IN!</p>
+      </div>
+
+
+      <!--==========The Watch==========-->
+      <!--<section class="row the-watch">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-5 col-md-offset-1 text-center the-watch-img wow zoomIn">
+                      <img src="images/the-watch.png" alt="" class="img-responsive">
+                  </div>
+                  <div class="col-md-6 the-watch-features">
+                      <div class="row section-header v3 wow fadeIn">
+                          <h2>The Watch</h2>
+                          <p>With an image in the side of this conetent, you can use this section to write about some cool thing about your product or its features.</p>
+                      </div>
+                      <ul class="nav">
+                          <li class="wow fadeIn" data-wow-delay="0.2s">Compatible with all devices</li>
+                          <li class="wow fadeIn" data-wow-delay="0.4s">Android and iOS Support</li>
+                          <li class="wow fadeIn" data-wow-delay="0.6s">Activity &amp; Health Tracker</li>
+                          <li class="wow fadeIn" data-wow-delay="0.8s">Read &amp; reply to messages</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </section>-->
+
+      <!--==========Split Columns==========-->
+      <section class="row split-columns">
+        <div class="row m0 split-column wow fadeIn">
+          <div class="col-sm-6 image text-right">
+            <%= image_tag('split-1.jpg')%>
+          </div>
+          <div class="col-sm-6 texts">
+            <div class="texts-inner row m0">
+              <h2>TO Organized stress free safely stored items </h2>
+              <p>wow</p>
+            </div>
+          </div>
+        </div>
+        <div class="row m0 split-column wow fadeIn">
+          <div class="col-sm-6 col-sm-push-6 image">
+            <%= image_tag('split-2.jpg')%>
+          </div>
+          <div class="col-sm-6 col-sm-pull-6 texts">
+            <div class="texts-inner row m0">
+              <h2>Clutter in your current  Console to ---->></h2>
+              <p>Pen, Business Cards .</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==========Reviews==========-->
+      <section class="row reviews" id="reviews">
+        <div class="container">
+          <div class="row section-header wow fadeInUp">
+            <h2>Reviews</h2>
+            <p>Don’t take our word,. See what our experts says about Nac-Jac organization System. We have got over 1000s of positive reviews.</p>
+          </div>
+          <div class="row">
+            <!--==========Review==========-->
+            <div class="review col-sm-4 wow fadeIn">
+              <%= image_tag('quote.png', class: 'review-sign')%>
+              <p>Wow! Pretty Neat Why has somebody done this before? This can't be the only product out there ..you have a winner How much and where can i get one.....</p>
+              <img src="" alt="" class="reviewer">
+            </div>
+            <!--==========Review==========-->
+            <div class="review col-sm-4 wow fadeIn" data-wow-delay="0.3s">
+              <%= image_tag('quote.png', class: 'review-sign')%>
+              <p>What a large waste Space in my console you could lose items in there ! Thanks Nacjac my items are organised .</p>
+              <img src="" alt="" class="reviewer">
+            </div>
+            <!--==========Review==========-->
+            <div class="review col-sm-4 wow fadeIn" data-wow-delay="0.6s">
+              <%= image_tag('quote.png', class: 'review-sign')%>
+              <p>Amazing product --it just works!</p>
+              <img src="" alt="" class="reviewer">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==========Featured On==========-->
+      <!--<section class="row  featured-on">
+          <div class="container">
+              <div class="row">
+                  <h3>As featured on</h3>
+                  <ul class="nav nav-justified">
+                      <li class="wow fadeInUp" data-wow-delay="0.2s"><img src="images/featured1.png" alt=""></li>
+                      <li class="wow fadeInUp" data-wow-delay="0.4s"><img src="images/featured2.png" alt=""></li>
+                      <li class="wow fadeInUp" data-wow-delay="0.6s"><img src="images/featured3.png" alt=""></li>
+                      <li class="wow fadeInUp" data-wow-delay="0.8s"><img src="images/featured4.png" alt=""></li>
+                      <li class="wow fadeInUp" data-wow-delay="1s"><img src="images/featured5.png" alt=""></li>
+                      <li class="wow fadeInUp" data-wow-delay="1.2s"><img src="images/featured6.png" alt=""></li>
+                  </ul>
+              </div>
+          </div>
+      </section>-->
+
+      <!--==========FAQS==========-->
+      <!-- <section class="row faqs">
+           <div class="container">
+               <div class="row section-header wow fadeInUp">
+                   <h2>faq</h2>
+                   <p>Got questions? We’ve got answers. If you have some other questions, feel free to send us an email to <a href="#">hello@product.com</a></p>
+               </div>
+               <div class="row">
+                   <!--==========Faq==========-->
+      <!--<div class="col-sm-6 faq wow fadeInUp">
+          <h4>What is Watch? How it works?</h4>
+          <p>Watch took center stage at this year's Product Show with a preview of watch OS 2. The next generation of Watch software is packed with features that just might turn the device from a nice-to-have into a must-have. If you already own an Apple Watch, you'll have to live with the old software until fall. You’ll love it at the first use.</p>
+      </div>-->
+      <!--==========Faq==========-->
+      <!--<div class="col-sm-6 faq wow fadeInUp">
+          <h4>How the watch is made?</h4>
+          <p>Watch has an anodized aluminum case (which is lighter than stainless steel) in silver or space gray, and the face is Ion-X glass, which also designed to be hard and rugged (as well as a little bit lighter) than the sapphire. It’s definitely the lightest of the three Apple Watch editions, making it an ideal exercise companion. </p>
+      </div>-->
+      <!--==========Faq==========-->
+      <!--<div class="col-sm-6 faq wow fadeInUp" data-wow-delay="0.3s">
+          <h4>Can I swap out the watch band?</h4>
+          <p>Absolutely. Watch comes with six bands that are easy to mix and match any band with any watch. You can swap them out as your heart desires without the aid of any tools—as long as the band and watch are the same size. (The Leather Loop band, for example, only fits 42mm watches, not the smaller 38mm size.) </p>
+      </div>-->
+      <!--==========Faq==========-->
+      <!--<div class="col-sm-6 faq wow fadeInUp" data-wow-delay="0.3s">
+          <h4>So it’s a watch and a fitness tracker?</h4>
+          <p>The accelerometer lets the watch count your steps, and it extrapolate distance on its own, or rely on the GPS in the paired Phone to trace your exact route. That step data comes in handy for two of the apps included on the watch: Activity and Workout. Both of the watch’s fitness apps sync data back to the Health and Fitness apps on your Phone.</p>
+      </div>-->
+    </div>
+  </div>
+</section>-->
+
+
+<!--==========Team==========-->
+
+<!--==========Team==========-->
+<section class="row team">
+  <div class="container">
+
+    <div class="row team_members">
+      <!--==========Member==========-->
+      <div class="col-md-3 col-sm-6 member wow fadeInUp">
+        <div class="row m0 inner">
+          <div class="row m0 image">
+            <%= image_tag('team-1.jpg')%>
+          </div>
+          <div class="texts row m0">
+            <h4>Harold "Pink" Johnson</h4>
+            <h5>Founder, Investor & Daily User</h5>
+          </div>
+        </div>
+      </div>
+      <div class="row section-header wow fadeInUp">
+        <h3></h3>
+
+
+        <p><%= image_tag('quote.png', class: 'rewiew-sign')%>  I Thank you for taking the time to review Nac-Jac product website and rather you Purches our product  welcome your feedback or comments because it's the
+      </div>
+      <!--==========Member==========-->
+      <!--<div class="col-md-3 col-sm-6 member wow fadeInUp" data-wow-delay="0.3s">
+          <div class="row m0 inner">
+              <div class="row m0 image">
+                  <img src="images/team-2.jpg" alt="">
+              </div>
+              <div class="texts row m0">
+                  <h4>Jeffrey Allen</h4>
+                  <h5>Co-Founder and CTO</h5>
+              </div>
+          </div>
+      </div>-->
+      <!--==========Member==========-->
+      <!--<div class="col-md-3 col-sm-6 member wow fadeInUp" data-wow-delay="0.6s">
+          <div class="row m0 inner">
+              <div class="row m0 image">
+                  <img src="images/team-3.jpg" alt="">
+              </div>
+              <div class="texts row m0">
+                  <h4>Sara Mendez</h4>
+                  <h5>Lead Developer, Hacker</h5>
+              </div>
+          </div>
+      </div>-->
+      <!--==========Member==========-->
+      <!--<div class="col-md-3 col-sm-6 member wow fadeInUp" data-wow-delay="0.9s">
+          <div class="row m0 inner">
+              <div class="row m0 image">
+                  <img src="images/team-4.jpg" alt="">
+              </div>
+              <div class="texts row m0">
+                  <h4>Albert Castro</h4>
+                  <h5>3D Designer &amp; Prototyper</h5>
+              </div>
+          </div>
+      </div>-->
+    </div>
+  </div>
+</section>
+
+<!--==========Newsletter==========-->
+<section class="row newsletter">
+  <div class="container">
+    <div class="row section-header wow fadeInUp">
+      <h2>newsletter</h2>
+      <p>Subscribe to our product newsletter </p>
+    </div>
+    <form action="php/subscribe.php" id="subscribeform" class="row newsletter-form" method="post">
+      <div class="input-group">
+        <input type="email" class="form-control" name="email" placeholder="Enter Your Email Address">
+                    <span class="input-group-addon">
+                    <button type="submit" id="js-subscribe-btn"><%= image_tag('right-angle-white.png')%></button>
+                </span>
+      </div>
+      <div id="js-subscribe-result" class="text-center" data-success-msg="Almost finished. Please check your email and verify." data-error-msg="Oops. Something went wrong.">
+        <p>
+          <%= image_tag('protect.png')%>No Spam. We Promise. Unsubscribe anytime.
+        </p>
+      </div>
+
+    </form>
+
+  </div>
+</section>
+
+<!--==========Contact==========-->
+<section class="row contact" id="contact">
+
+  <!-- ================== GOOGLE MAP (Change data-lat & data-lon values) ====================== -->
+  <!-- TIP : More Customization / Color option available in /js/plugins/google-map.js -->
+
+  <div id="mapBox" class="row m0" data-lat="31.614815" data-lon="-94.639137" data-zoom="15"></div>
+  <!-- Flippable Contact Box -->
+  <div class="flip-box-container row m0">
+    <div class="flip-box row m0 wow fadeIn">
+      <!-- Contact Address (front Side) -->
+      <div class="row contact-box flip-box-part">
+        <h2>get in touch</h2>
+        <ul class="nav">
+          <li><i class="fa fa-map-marker"></i>1326 N UNIVERSITY
+            <br>Nacogdoches, Texas 75961 USA</li>
+          <li><i class="fa fa-phone"></i>+1(936)462-8348
+            <br>+</li>
+          <li><i class="fa fa-envelope"></i>support@nacjac.com</li>
+        </ul>
+        <button class="flip-contact-box btn btn-block">contact us</button>
+      </div>
+      <!-- Contact Form (back Side) -->
+      <div class="row contact-form flip-box-part">
+        <a href="javascript:void(0);" class="js-close-flip">&times;</a>
+        <!-- Contact Form Starts here -->
+        <!--<form action="contact" id="phpcontactform" method="POST">
+          <div class="row">
+            <div class="form-group col-sm-6">
+              <input type="text" name="name" class="form-control" placeholder="Name" required>
+            </div>
+            <div class="form-group col-sm-6">
+              <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+          </div>
+
+          <div class="form-group">
+            <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+          </div>
+          <button type="submit" id="js-contact-btn" class="btn btn-block">Send Message</button>
+          <div id="js-contact-result" data-success-msg="Form submitted successfully." data-error-msg="Oops. Something went wrong."></div>
+        </form>-->
+        <!-- // End Contact form -->
+        <%= form_tag("contact", method: "post", id: 'phpcontactform') do %>
+            <div class="row">
+              <div class="form-group col-sm-6">
+                <%= text_field_tag('name', nil, class: 'form-control', placeholder: 'Name') %>
+              </div>
+              <div class="form-group col-sm-6">
+                <%= email_field_tag('email', nil,  class: 'form-control', placeholder: 'Email Address') %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= text_field_tag('subject', nil, class: 'form-control', placeholder: 'Subject') %>
+            </div>
+
+            <div class="form-group">
+              <%= text_area_tag('message', nil, class: 'form-control', placeholder: 'Message') %>
+            </div>
+            <button type="submit" id="js-contact-btn" class="btn btn-block">Send Message</button>
+            <div id="js-contact-result" data-success-msg="Form submitted successfully." data-error-msg="Oops. Something went wrong."></div>
+        <% end %>
+      </div>
+      <!-- // End back Side -->
+    </div>
+  </div>
+  <!-- // End Contact Box -->
+</section>
+
+<!--==========Footer==========-->
+<footer class="row">
+  <div class="container">
+    <div class="row m0 social-links">
+      <ul class="nav">
+        <li class="wow fadeInUp"><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li class="wow fadeInUp" data-wow-delay="0.1s"><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li class="wow fadeInUp" data-wow-delay="0.2s"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li class="wow fadeInUp" data-wow-delay="0.3s"><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li class="wow fadeInUp" data-wow-delay="0.4s"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li class="wow fadeInUp" data-wow-delay="0.5s"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+      </ul>
+    </div>
+    <div class="row m0 menu-rights">
+      <ul class="nav footer-menu">
+        <li><a href="about.html">About</a></li>
+        <li><a href="terms-of-use.html">Terms of Use</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="#">Mobile App</a></li>
+        <li><a href="presskit.zip">PressKit</a></li>
+      </ul>
+      <p>Copyright © 2016.
+        <br class="small-divide"> All rights reserved</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+                        PRODUCT POPUP
+     ============================================================ -->
+
+<div class="row product-box mfp-hide" id="product-choose">
+  <button class="mfp-close custom_close" title="Close (Esc)" type="button">&#215;</button>
+  <div class="product-img-gallery">
+    <div id="product-imgs" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#product-imgs" data-slide-to="0" class="active"></li>
+        <li data-target="#product-imgs" data-slide-to="1"></li>
+        <li data-target="#product-imgs" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag('the-watch-1.png', alt: 'watch-1')%>
+        </div>
+        <div class="item">
+          <%= image_tag('the-watch-2.png', alt: 'watch-2')%>
+        </div>
+        <div class="item">
+          <%= image_tag('the-watch-3.png', alt: 'watch-3')%>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-desc">
+
+    <!-- Testing Paypal? Change Paypal URL to https://www.sandbox.paypal.com/cgi-bin/webscr If you are testing -->
+    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="POST" target="_top" class="choose-form row m0" id="paypal-regn">
+
+      <div id="js-product-info" class="product-info">
+        <h4 class="name">Smart Watch</h4>
+        <h2 class="edition">Sports Edition</h2>
+        <h5 class="model">MODEL AS1500</h5>
+        <h2 class="price"><del>$349</del>$299 <span class="label label-default">early bird offer</span></h2>
+        <div class="row m0 description">
+          <p>8mm Silver Aluminum Case with Blue Sport Band. Its perfect fit for tracking fitness. 100% waterproof. Buy this limited edition sports edition.</p>
+        </div>
+
+        <div class="choose-options row m0" id="js-choose-color">
+          <div class="option">
+            <h4 class="form-label">Choose a color</h4>
+            <div class="row m0 colors">
+              <input type="radio" name="os0" value="Black" id="color-1" checked>
+              <label for="color-1"></label>
+
+            </div>
+          </div>
+          <div class="option">
+            <h4 class="form-label">Qty</h4>
+            <input type="text" value="1" name="quantity" class="quanity">
+          </div>
+          <div class="option">
+            <h4 class="form-label">Size</h4>
+            <select class="selectpicker" name="os1">
+              <option value="M" selected>M</option>
+              <option value="L">L</option>
+
+            </select>
+          </div>
+        </div>
+        <div class="submit-area row m0">
+          <a href="javscript:void(0);" class="btn btn-rounded btn-block" id="next-personal">Checkout</a>
+        </div>
+      </div>
+      <!-- // End Product Info -->
+
+      <div class="personal-info" id="js-personal-info">
+
+        <div class="form-group text-center"><a href="javscript:void(0);" class="btn" id="prev-product-info">Go Back</a></div>
+
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
+          </div>
+          <div class="form-group col-sm-6">
+            <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="address1" class="form-control" placeholder="Address Line 1" required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="address2" class="form-control" placeholder="Address Line 2" required>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <input type="text" name="state" class="form-control" placeholder="State" required>
+          </div>
+          <div class="form-group col-sm-6">
+            <input type="text" name="zip" class="form-control" placeholder="Zip Code" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+
+          <select class="form-control" name="Country" required>
+            <option selected value="">Choose a country</option>
+            <option value="United States">United States</option>
+            <option value="Canada">Canada</option>
+
+          </select>
+        </div>
+
+        <!--
+                Paypal Hidden Fields
+                ====================================== -->
+        <!-- Customization Guide : http://bit.ly/papyal_dev_html_guide/ -->
+        <!-- Paypal Form customization is not included in the Support Scope. Sorry. -->
+        <!-- Change values inside value="" only -->
+
+        <input type="hidden" name="cmd" value="_xclick">
+        <!-- Your Paypal email to receive funds -->
+        <input type="hidden" name="business" value="surjithctly-facilitator@gmail.com">
+        <input type="hidden" name="lc" value="IN">
+        <!-- Product Name -->
+        <input type="hidden" name="item_name" value="Smart Watch Sports Edition">
+        <!-- Model Number -->
+        <input type="hidden" name="item_number" value="AS1500">
+        <!-- Price -->
+        <input type="hidden" name="amount" value="299.00">
+        <!-- Currency -->
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="no_note" value="0">
+        <!-- TAX -->
+        <input type="hidden" name="tax_rate" value="5.000">
+        <!-- Shipping -->
+        <input type="hidden" name="shipping" value="10.00">
+        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+        <!-- Color Name -->
+        <input type="hidden" name="on0" value="Color">
+        <!-- Size Name -->
+        <input type="hidden" name="on1" value="Size">
+
+        <!-- Verify Paypal Payment - URL of PHP file. -->
+        <!-- You have to give the Same URL also in Paypal => Profile => Selling Tools => IPN => Notfication URL -->
+        <input type="hidden" name="notify_url" value="https://demo.web3canvas.com/themeforest/proland/php/verify-ipn.php">
+        <!-- Payment Success Return page -->
+        <input type="hidden" name="return" value="http://demo.web3canvas.com/themeforest/proland/success.html">
+        <!-- Payment Cancel Return page -->
+        <input type="hidden" name="cancel_return" value="http://demo.web3canvas.com/themeforest/proland/index_buy_paypal.html">
+        <!-- ./ End Paypal Hidden Fields -->
+
+        <div class="submit-area-2 row m0">
+          <button type="submit" class="btn btn-rounded js-preorder-btn btn-block"><span>Pay with Paypal</span></button>
+          <!-- Paypal Tracking Pixel. Do not remove -->
+          <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </div>
+
+      </div>
+      <!-- // end #js-personal-info.personal-info -->
+
+    </form>
+
+  </div>
+</div>
+
+<!-- // End Product Popup Section -->
+
+<!--========== Javascript Files ==========-->
+<!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
+<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js" %>
+<%= javascript_include_tag "application" %>
+
+</body>
+
+</html>
