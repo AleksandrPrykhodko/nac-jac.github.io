@@ -254,46 +254,17 @@ Surjith S M / @surjithctly
             <p>Please Review our Vehicle Make/Model section to determine quantities for your Pick-Up or SUV </p>
           </div>
           <div class="row collections">
-            <!--==========Collection Items==========-->
-            <div class="col-sm-6 col-md-3 item wow fadeIn">
-              <div class="row m0 featured-img">
-                <%= image_tag('collection-1.jpg')%>
-              </div>
-              <h4 class="title">NAC-JAC TRAY</h4>
-              <h5 class="category">---</h5>
-              <h4 class="price">$16.99</h4>
-              <a href="#product-choose-1" class="btn">CHOOSE</a>
-            </div>
-            <!--==========Collection Items==========-->
-            <div class="col-sm-6 col-md-3 item wow fadeIn" data-wow-delay="0.5s">
-              <div class="row m0 featured-img">
-                <%= image_tag('collection-2.jpg')%>
-              </div>
-              <h4 class="title">NAC-JAC FILE FOLDERS</h4>
-              <h5 class="category">Save &amp; $3.99</h5>
-              <h4 class="price">$16.99 &amp;  OR Two for $30  </h4>
-              <a href="#product-choose-2" class="btn">CHOOSE</a>
-            </div>
-            <!--==========Collection Items==========-->
-            <!--<div class="col-sm-6 col-md-3 item wow fadeIn" data-wow-delay="1s">
-                <div class="row m0 featured-img">
-                    <img src="images/collection-3.jpg" alt="">
+            <% @products.each do |product| %>
+                <div class="col-sm-6 col-md-3 item wow fadeIn">
+                  <div class="row m0 featured-img">
+                    <%= image_tag(product.photo_url)%>
+                  </div>
+                  <h4 class="title"><%= product.title %></h4>
+                  <h5 class="category"><%= product.notes %></h5>
+                  <h4 class="price"><%= product.price %></h4>
+                  <a href="#product-<%= product.id %>" class="btn">CHOOSE</a>
                 </div>
-                <h4 class="title">Watch Original</h4>
-                <h5 class="category">The FirstWatch ever released</h5>
-                <h4 class="price">$249</h4>
-                <a href="#product-choose" class="btn">CHOOSE</a>
-            </div>-->
-            <!--==========Collection Items==========-->
-            <div class="col-sm-6 col-md-3 item wow fadeIn" data-wow-delay="1.5s">
-              <div class="row m0 featured-img">
-                <%= image_tag('collection-4.jpg')%>
-              </div>
-              <h4 class="title">NAC-JAC TRAYS</h4>
-              <h5 class="category">Set of Four --Save $7.99</h5>
-              <h4 class="price">$60</h4>
-              <a href="#product-choose-3" class="btn">CHOOSE</a>
-            </div>
+            <% end %>
           </div>
         </div>
       </section>

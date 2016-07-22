@@ -1,7 +1,28 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Product.delete_all
+Product.create(
+    [
+        {
+            id: 1,
+            title: 'NAC-JAC TRAY',
+            slug: 'NAC-JAC-TRAY',
+            description: 'Tray description',
+            photo_url: 'products/NAC-JAC-TRAY.jpg',
+            price: 16.99
+        },
+        {
+            id: 2,
+            title: 'NAC-JAC FILE FOLDERS',
+            slug: 'NAC-JAC-FILE-FOLDERS',
+            description: 'Folders description',
+            photo_url: 'products/NAC-JAC-FILE-FOLDERS.jpg',
+            price: 16.99
+        },
+        {
+            id: 4,
+            title: 'NAC-JAC TRAYS',
+            slug: 'NAC-JAC-TRAYS',
+            description: 'Trays description',
+            photo_url: 'products/NAC-JAC-TRAYS.jpg',
+            price: 60.00
+        }
+    ])
