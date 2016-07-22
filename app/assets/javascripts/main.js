@@ -9,6 +9,9 @@
  Surjith S M / @surjithctly
 
  -------------------------------------------------- */
+var cart = {
+
+};
 
 (function($) {
 
@@ -155,6 +158,17 @@
     midClick: true // mouse middle button click
   });
 
+  $('.submit-area .btn').on('click', function(){
+    var product_id = $(this).parents('[name="product_id"]').val();
+    var product_qty = $(this).parents('[name="quantity"]').val();
+    if(product_qty > 0) {
+      cart[product_id] = product_qty;
+    } else {
+      delete cart[product_id];
+    }
+    $.magnificPopup.close();
+  });
+
 
   /* ---------- MAGNIFIC POPUP ---------- */
 
@@ -171,15 +185,11 @@
 
   /* ---------- QUANTITY TOUCHSPIN ---------- */
 
-  if($('.quanity').length) {
-
     $('.quanity').TouchSpin({
       verticalbuttons: true,
       verticalupclass: 'glyphicon glyphicon-plus',
       verticaldownclass: 'glyphicon glyphicon-minus'
     });
-
-  }
 
   /* ---------- SELECTPICKER ---------- */
 

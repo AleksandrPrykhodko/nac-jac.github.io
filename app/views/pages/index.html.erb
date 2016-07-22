@@ -729,19 +729,25 @@ Surjith S M / @surjithctly
       <%= image_tag(product.photo_url)%>
     </div>
     <div class="product-desc">
-      <div id="js-product-info" class="product-info-<%= product.id %>">
-        <!-- <h4 class="name">Smart Watch</h4> -->
-        <h2 class="edition"><%= product.title %></h2>
-        <!-- <h5 class="model">MODEL AS1500</h5> -->
-        <!-- <h2 class="price"><del>$349</del>$299 <span class="label label-default">early bird offer</span></h2> -->
-        <h2 class="price"><%= product.notes.html_safe %></h2>
-        <div class="row m0 description">
-          <p><%= product.description %></p>
+      <form method="POST" target="_top" class="choose-form row m0">
+        <div id="js-product-info" class="product-info-<%= product.id %>">
+          <input name="product_id" value="<%= product.id %>" type="hidden"/>
+          <h2 class="edition"><%= product.title %></h2>
+          <h2 class="price"><%= product.notes.html_safe %></h2>
+          <div class="row m0 description">
+            <p><%= product.description %></p>
+          </div>
+          <div class="choose-options row m0" id="js-choose-color">
+            <div class="option">
+              <h4 class="form-label">Qty</h4>
+              <input type="text" value="1" name="quantity" class="quanity">
+            </div>
+          </div>
+          <div class="submit-area row m0">
+            <span class="btn btn-rounded btn-block">Add to cart</span>
+          </div>
         </div>
-        <div class="submit-area row m0">
-          <%= link_to 'Checkout', prepare_path(1, format: :js), remote: true, class: 'btn btn-rounded btn-block' %>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
 <% end %>
