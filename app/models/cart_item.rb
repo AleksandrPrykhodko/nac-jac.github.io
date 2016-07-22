@@ -8,12 +8,6 @@ class CartItem < ActiveRecord::Base
       raise 'product should be defined'
     end
 
-    price = self.product.price
-
-    if self.product.slug == 'NAC-JAC-FILE-FOLDERS' && self.quantity > 1
-      price = 15
-    end
-
-    price * self.quantity
+    self.product.calculate_price self.quantity
   end
 end

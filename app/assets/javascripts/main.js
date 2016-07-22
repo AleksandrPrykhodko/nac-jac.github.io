@@ -9,9 +9,7 @@
  Surjith S M / @surjithctly
 
  -------------------------------------------------- */
-var cart = {
-
-};
+var cart = {};
 
 (function($) {
 
@@ -152,20 +150,47 @@ var cart = {
   /* ---------- PRODUCT POPUP ---------- */
 
 
-  $('.btnChooseProduct, .btnBuyProducts').magnificPopup({
+  $('.btnChooseProduct').magnificPopup({
     type: 'inline',
     mainClass: 'mfp-fade',
     midClick: true // mouse middle button click
   });
 
-  $('.submit-area .btn').on('click', function(){
-    var product_id = $(this).parents('[name="product_id"]').val();
-    var product_qty = $(this).parents('[name="quantity"]').val();
+  $('.btnBuyProducts').magnificPopup({
+    type: 'inline',
+    mainClass: 'mfp-fade',
+    midClick: true, // mouse middle button click
+    callbacks: {
+      open: function() {
+        var content = '';
+        var data = {};
+        $.each(cart, function(_id, obj) {
+          data[_id] = obj['qty'];
+        });
+
+        $.post({
+          url: '/cart/calculate',
+          data: {'form_data': JSON.stringify(data)}
+        }, function(data) {
+          $('#total_price').text(data);
+        });
+      }
+    }
+  });
+
+  $('.submit-area .btn').on('click', function() {
+    var parent_box = $(this).parents('.product-box');
+
+    var product_id = parent_box.find('[name="product_id"]').val();
+    var product_qty = parent_box.find('[name="quantity"]').val();
+    var product_title = parent_box.find('[name="product_title"]').val();
+
     if(product_qty > 0) {
-      cart[product_id] = product_qty;
+      cart[product_id] = {qty: product_qty, title: product_title};
     } else {
       delete cart[product_id];
     }
+
     $.magnificPopup.close();
   });
 
@@ -185,11 +210,11 @@ var cart = {
 
   /* ---------- QUANTITY TOUCHSPIN ---------- */
 
-    $('.quanity').TouchSpin({
-      verticalbuttons: true,
-      verticalupclass: 'glyphicon glyphicon-plus',
-      verticaldownclass: 'glyphicon glyphicon-minus'
-    });
+  $('.quanity').TouchSpin({
+    verticalbuttons: true,
+    verticalupclass: 'glyphicon glyphicon-plus',
+    verticaldownclass: 'glyphicon glyphicon-minus'
+  });
 
   /* ---------- SELECTPICKER ---------- */
 
@@ -268,7 +293,6 @@ var cart = {
       submitHandler: function(form) {
         $("#reserve-btn").attr("disabled", true);
         form.submit();
-        //console.log($(form).serialize())
       }
     });
   }
