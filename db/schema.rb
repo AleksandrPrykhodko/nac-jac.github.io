@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20160722084043) do
 
   # These are extensions that must be enabled in order to support this database
@@ -50,4 +51,15 @@ ActiveRecord::Schema.define(version: 20160722084043) do
 
   add_foreign_key "cart_items", "carts"
   add_foreign_key "cart_items", "products"
+
+
+  create_table "mail_subscriptions", force: :cascade do |t|
+    t.string   "email",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "mail_subscriptions", ["email"], name: "index_mail_subscriptions_on_email", unique: true
+
+
 end
