@@ -121,7 +121,7 @@ Surjith S M / @surjithctly
 
                 patterns: {
                     youtube: {
-                        index: 'youtube.com/', // String that detects type of video 
+                        index: 'youtube.com/', // String that detects type of video
 
                         id: 'v=', // String that splits URL in a two parts, second part should be %id%
                         // Or null - full URL will be returned
@@ -151,14 +151,28 @@ Surjith S M / @surjithctly
 
     /* ---------- PRODUCT POPUP ---------- */
 
-    if ($('a[href="#product-choose"]').length) {
-
-        $('a[href="#product-choose"]').magnificPopup({
+    if ($('a[href="#product-choose-1"]').length) {
+        $('a[href="#product-choose-1"]').magnificPopup({
             type: 'inline',
             mainClass: 'mfp-fade',
             midClick: true // mouse middle button click
         });
+    }
 
+    if ($('a[href="#product-choose-2"]').length) {
+        $('a[href="#product-choose-2"]').magnificPopup({
+            type: 'inline',
+            mainClass: 'mfp-fade',
+            midClick: true // mouse middle button click
+        });
+    }
+
+    if ($('a[href="#product-choose-3"]').length) {
+        $('a[href="#product-choose-3"]').magnificPopup({
+            type: 'inline',
+            mainClass: 'mfp-fade',
+            midClick: true // mouse middle button click
+        });
     }
 
 

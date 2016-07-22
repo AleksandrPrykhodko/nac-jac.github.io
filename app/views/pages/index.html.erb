@@ -262,7 +262,7 @@ Surjith S M / @surjithctly
               <h4 class="title">NAC-JAC TRAY</h4>
               <h5 class="category">---</h5>
               <h4 class="price">$16.99</h4>
-              <a href="#product-choose" class="btn">CHOOSE</a>
+              <a href="#product-choose-1" class="btn">CHOOSE</a>
             </div>
             <!--==========Collection Items==========-->
             <div class="col-sm-6 col-md-3 item wow fadeIn" data-wow-delay="0.5s">
@@ -272,7 +272,7 @@ Surjith S M / @surjithctly
               <h4 class="title">NAC-JAC FILE FOLDERS</h4>
               <h5 class="category">Save &amp; $3.99</h5>
               <h4 class="price">$16.99 &amp;  OR Two for $30  </h4>
-              <a href="#product-choose" class="btn">CHOOSE</a>
+              <a href="#product-choose-2" class="btn">CHOOSE</a>
             </div>
             <!--==========Collection Items==========-->
             <!--<div class="col-sm-6 col-md-3 item wow fadeIn" data-wow-delay="1s">
@@ -292,7 +292,7 @@ Surjith S M / @surjithctly
               <h4 class="title">NAC-JAC TRAYS</h4>
               <h5 class="category">Set of Four --Save $7.99</h5>
               <h4 class="price">$60</h4>
-              <a href="#product-choose" class="btn">CHOOSE</a>
+              <a href="#product-choose-3" class="btn">CHOOSE</a>
             </div>
           </div>
         </div>
@@ -750,168 +750,48 @@ Surjith S M / @surjithctly
                         PRODUCT POPUP
      ============================================================ -->
 
-<div class="row product-box mfp-hide" id="product-choose">
-  <button class="mfp-close custom_close" title="Close (Esc)" type="button">&#215;</button>
-  <div class="product-img-gallery">
-    <div id="product-imgs" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#product-imgs" data-slide-to="0" class="active"></li>
-        <li data-target="#product-imgs" data-slide-to="1"></li>
-        <li data-target="#product-imgs" data-slide-to="2"></li>
-      </ol>
+<% Item.all.each do |item| %>
+  <div class="row product-box mfp-hide" id="product-choose-<%= item[:id] %>">
+    <button class="mfp-close custom_close" title="Close (Esc)" type="button">&#215;</button>
+    <div class="product-img-gallery">
+      <div id="product-imgs" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#product-imgs" data-slide-to="0" class="active"></li>
+          <li data-target="#product-imgs" data-slide-to="1"></li>
+          <li data-target="#product-imgs" data-slide-to="2"></li>
+        </ol>
 
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <%= image_tag('the-watch-1.png', alt: 'watch-1')%>
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <%= image_tag('the-watch-1.png', alt: 'watch-1')%>
+          </div>
+          <div class="item">
+            <%= image_tag('the-watch-2.png', alt: 'watch-2')%>
+          </div>
+          <div class="item">
+            <%= image_tag('the-watch-3.png', alt: 'watch-3')%>
+          </div>
         </div>
-        <div class="item">
-          <%= image_tag('the-watch-2.png', alt: 'watch-2')%>
+      </div>
+    </div>
+    <div class="product-desc">
+      <div id="js-product-info" class="product-info-<%= item[:id] %>">
+        <!-- <h4 class="name">Smart Watch</h4> -->
+        <h2 class="edition"><%= item[:title] %></h2>
+        <!-- <h5 class="model">MODEL AS1500</h5> -->
+        <!-- <h2 class="price"><del>$349</del>$299 <span class="label label-default">early bird offer</span></h2> -->
+        <h2 class="price">$<%= number_with_precision(item[:price], precision: 2) %></h2>
+        <div class="row m0 description">
+          <p><%= item[:description] %></p>
         </div>
-        <div class="item">
-          <%= image_tag('the-watch-3.png', alt: 'watch-3')%>
+        <div class="submit-area row m0">
+          <%= link_to 'Checkout', prepare_path(1, format: :js), remote: true, class: 'btn btn-rounded btn-block' %>
         </div>
       </div>
     </div>
   </div>
-  <div class="product-desc">
-
-    <!-- Testing Paypal? Change Paypal URL to https://www.sandbox.paypal.com/cgi-bin/webscr If you are testing -->
-    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="POST" target="_top" class="choose-form row m0" id="paypal-regn">
-
-      <div id="js-product-info" class="product-info">
-        <h4 class="name">Smart Watch</h4>
-        <h2 class="edition">Sports Edition</h2>
-        <h5 class="model">MODEL AS1500</h5>
-        <h2 class="price"><del>$349</del>$299 <span class="label label-default">early bird offer</span></h2>
-        <div class="row m0 description">
-          <p>8mm Silver Aluminum Case with Blue Sport Band. Its perfect fit for tracking fitness. 100% waterproof. Buy this limited edition sports edition.</p>
-        </div>
-
-        <div class="choose-options row m0" id="js-choose-color">
-          <div class="option">
-            <h4 class="form-label">Choose a color</h4>
-            <div class="row m0 colors">
-              <input type="radio" name="os0" value="Black" id="color-1" checked>
-              <label for="color-1"></label>
-
-            </div>
-          </div>
-          <div class="option">
-            <h4 class="form-label">Qty</h4>
-            <input type="text" value="1" name="quantity" class="quanity">
-          </div>
-          <div class="option">
-            <h4 class="form-label">Size</h4>
-            <select class="selectpicker" name="os1">
-              <option value="M" selected>M</option>
-              <option value="L">L</option>
-
-            </select>
-          </div>
-        </div>
-        <div class="submit-area row m0">
-          <a href="javscript:void(0);" class="btn btn-rounded btn-block" id="next-personal">Checkout</a>
-        </div>
-      </div>
-      <!-- // End Product Info -->
-
-      <div class="personal-info" id="js-personal-info">
-
-        <div class="form-group text-center"><a href="javscript:void(0);" class="btn" id="prev-product-info">Go Back</a></div>
-
-        <div class="row">
-          <div class="form-group col-sm-6">
-            <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
-          </div>
-          <div class="form-group col-sm-6">
-            <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-        </div>
-
-        <div class="form-group">
-          <input type="text" name="address1" class="form-control" placeholder="Address Line 1" required>
-        </div>
-
-        <div class="form-group">
-          <input type="text" name="address2" class="form-control" placeholder="Address Line 2" required>
-        </div>
-
-        <div class="row">
-          <div class="form-group col-sm-6">
-            <input type="text" name="state" class="form-control" placeholder="State" required>
-          </div>
-          <div class="form-group col-sm-6">
-            <input type="text" name="zip" class="form-control" placeholder="Zip Code" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-
-          <select class="form-control" name="Country" required>
-            <option selected value="">Choose a country</option>
-            <option value="United States">United States</option>
-            <option value="Canada">Canada</option>
-
-          </select>
-        </div>
-
-        <!--
-                Paypal Hidden Fields
-                ====================================== -->
-        <!-- Customization Guide : http://bit.ly/papyal_dev_html_guide/ -->
-        <!-- Paypal Form customization is not included in the Support Scope. Sorry. -->
-        <!-- Change values inside value="" only -->
-
-        <input type="hidden" name="cmd" value="_xclick">
-        <!-- Your Paypal email to receive funds -->
-        <input type="hidden" name="business" value="surjithctly-facilitator@gmail.com">
-        <input type="hidden" name="lc" value="IN">
-        <!-- Product Name -->
-        <input type="hidden" name="item_name" value="Smart Watch Sports Edition">
-        <!-- Model Number -->
-        <input type="hidden" name="item_number" value="AS1500">
-        <!-- Price -->
-        <input type="hidden" name="amount" value="299.00">
-        <!-- Currency -->
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="button_subtype" value="services">
-        <input type="hidden" name="no_note" value="0">
-        <!-- TAX -->
-        <input type="hidden" name="tax_rate" value="5.000">
-        <!-- Shipping -->
-        <input type="hidden" name="shipping" value="10.00">
-        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-        <!-- Color Name -->
-        <input type="hidden" name="on0" value="Color">
-        <!-- Size Name -->
-        <input type="hidden" name="on1" value="Size">
-
-        <!-- Verify Paypal Payment - URL of PHP file. -->
-        <!-- You have to give the Same URL also in Paypal => Profile => Selling Tools => IPN => Notfication URL -->
-        <input type="hidden" name="notify_url" value="https://demo.web3canvas.com/themeforest/proland/php/verify-ipn.php">
-        <!-- Payment Success Return page -->
-        <input type="hidden" name="return" value="http://demo.web3canvas.com/themeforest/proland/success.html">
-        <!-- Payment Cancel Return page -->
-        <input type="hidden" name="cancel_return" value="http://demo.web3canvas.com/themeforest/proland/index_buy_paypal.html">
-        <!-- ./ End Paypal Hidden Fields -->
-
-        <div class="submit-area-2 row m0">
-          <button type="submit" class="btn btn-rounded js-preorder-btn btn-block"><span>Pay with Paypal</span></button>
-          <!-- Paypal Tracking Pixel. Do not remove -->
-          <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-        </div>
-
-      </div>
-      <!-- // end #js-personal-info.personal-info -->
-
-    </form>
-
-  </div>
-</div>
+<% end %>
 
 <!-- // End Product Popup Section -->
 

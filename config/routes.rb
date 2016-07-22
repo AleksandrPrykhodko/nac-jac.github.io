@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   post 'mail/contact' => 'mail#contact'
 
+  get '/prepare/:id' => 'items#prepare', as: :prepare
+  post '/buy' => 'items#buy', as: :buy
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
