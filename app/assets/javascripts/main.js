@@ -171,8 +171,14 @@ var cart = {};
         $.post({
           url: '/cart/calculate',
           data: {'form_data': JSON.stringify(data)}
-        }, function(data) {
-          $('#total_price').text(data);
+        }, function(total_price) {
+          if(total_price + '' === '0') {
+            $('#btnCheckout').addClass('btn-inactive');
+          } else {
+            $('#btnCheckout').removeClass('btn-inactive');
+          }
+
+          $('#total_price').text(total_price);
         });
       }
     }

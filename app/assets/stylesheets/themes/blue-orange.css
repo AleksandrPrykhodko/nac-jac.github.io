@@ -731,6 +731,12 @@ footer.row .menu-rights p {
   color: #fff;
 }
 
+.product-desc .choose-form .submit-area .btn-inactive {
+    background-color: #333 !important;
+    color: white !important;
+    cursor: not-allowed;
+}
+
 .product-desc .choose-form .bootstrap-touchspin input {
   border-color: #e0e8ee;
   background: none;
