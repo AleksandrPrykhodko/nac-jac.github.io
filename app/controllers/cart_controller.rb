@@ -19,5 +19,7 @@ class CartController < ApplicationController
   end
 
   def checkout
+    # save form & chosen products to cart / cart items
+    # submit paypal request
   end
 end

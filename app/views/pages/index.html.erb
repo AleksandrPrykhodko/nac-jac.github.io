@@ -604,18 +604,16 @@ Surjith S M / @surjithctly
     <form action="php/subscribe.php" id="subscribeform" class="row newsletter-form" method="post">
       <div class="input-group">
         <input type="email" class="form-control" name="email" placeholder="Enter Your Email Address">
-                    <span class="input-group-addon">
-                    <button type="submit" id="js-subscribe-btn"><%= image_tag('right-angle-white.png')%></button>
-                </span>
+          <span class="input-group-addon">
+          <button type="submit" id="js-subscribe-btn"><%= image_tag('right-angle-white.png')%></button>
+        </span>
       </div>
       <div id="js-subscribe-result" class="text-center" data-success-msg="Great! We will update you on our news" data-error-msg="Oops. Something went wrong.">
         <p>
           <%= image_tag('protect.png')%>No Spam. We Promise. Unsubscribe anytime.
         </p>
       </div>
-
     </form>
-
   </div>
 </section>
 
@@ -756,14 +754,57 @@ Surjith S M / @surjithctly
 <div class="row product-box mfp-hide" id="product-buy">
   <button class="mfp-close custom_close" title="Close (Esc)" type="button">&#215;</button>
   <div class="product-img-gallery">
-    &nbsp;
+    <div class="order-desc">
+      <h2 class="edition">Total price, <span class="price">$<span id="total_price"></span></span></h2>
+      <div class="products-selected"></div>
+      <div class="products-not-selected">
+        Choose at least one product
+      </div>
+    </div>
   </div>
   <div class="product-desc">
-    <form method="POST" target="_top" class="choose-form row m0" id="paypal-regn">
-      <div id="js-product-info">
-        <h2 class="edition">Total price, <span class="price">$<span id="total_price"></span></span></h2>
-        <div class="submit-area row m0">
-          <span class="btn btn-rounded btn-block btn-inactive" id="btnCheckout">Pay with paypal</span>
+    <form method="POST" target="_top" class="choose-form row m0" id="checkout-form">
+      <div class="personal-info slide-in-right" id="js-personal-info">
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <input type="text" name="first_name" class="form-control" placeholder="First Name" required="">
+          </div>
+          <div class="form-group col-sm-6">
+            <input type="text" name="last_name" class="form-control" placeholder="Last Name" required="">
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required="">
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="address1" class="form-control" placeholder="Address Line 1" required="">
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="address2" class="form-control" placeholder="Address Line 2" required="">
+        </div>
+
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <input type="text" name="state" class="form-control" placeholder="State" required="">
+          </div>
+          <div class="form-group col-sm-6">
+            <input type="text" name="zip" class="form-control" placeholder="Zip Code" required="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <select class="form-control" name="Country" required="">
+            <option selected="" value="">Choose a country</option>
+            <option value="United States">United States</option>
+            <option value="Canada">Canada</option>
+
+          </select>
+        </div>
+
+        <div class="submit-area-2 row m0">
+          <button type="submit" class="btn btn-rounded js-preorder-btn btn-block"><span>Pay with Paypal</span></button>
         </div>
       </div>
     </form>

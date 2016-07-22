@@ -174,12 +174,19 @@ var cart = {};
         }, function(total_price) {
           if(total_price + '' === '0') {
             $('#btnCheckout').addClass('btn-inactive');
+            $('.products-selected').hide();
+            $('.products-not-selected').show();
           } else {
             $('#btnCheckout').removeClass('btn-inactive');
+            $('.products-selected').show();
+            $('.products-not-selected').hide();
           }
 
           $('#total_price').text(total_price);
         });
+      },
+      close: function() {
+        $('#checkout-form').trigger("reset");
       }
     }
   });
@@ -274,9 +281,9 @@ var cart = {};
     });
   }
 
-  if($.fn.validator) {
+  if($.validator) {
     // validate Registration Form
-    $("#paypal-regn").validate({
+    $("#checkout-form").validate({
       rules: {
         first_name: "required",
         last_name: "required",

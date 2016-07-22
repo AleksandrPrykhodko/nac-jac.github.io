@@ -3522,6 +3522,7 @@ footer.row {
   padding: 48px 37px 40px 35px;
   overflow-x: hidden;
   overflow-y: visible;
+  min-height: 600px;
 }
 
 @media (max-width: 991px) {
@@ -3543,7 +3544,11 @@ footer.row {
   margin: 0 0 8px;
 }
 
-.product-desc .edition {
+.order-desc {
+  margin: 50px 10px 0;
+}
+
+.order-desc .edition, .product-desc .edition {
   text-transform: uppercase;
   font: 700 33px/1 "Poppins", sans-serif;
   margin: 0 0 10px;
@@ -3561,7 +3566,11 @@ footer.row {
   text-transform: uppercase;
 }
 
-.product-desc .price del {
+.order-desc .price {
+  color: #0084ff;
+}
+
+.order-desc .price del, .product-desc .price del {
   font-size: 26px;
   font-weight: 300;
   margin-right: 14px;
