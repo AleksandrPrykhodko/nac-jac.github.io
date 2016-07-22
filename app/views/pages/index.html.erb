@@ -1,117 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<!--
-
-Page    : Home Page
-Version : 1.0
-Author  : Surjith S M
-URI     : http://themeforest.net/user/surjithctly
-
-Copyright © All rights Reserved
-
-
--->
-
-<head>
-  <meta charset="utf-8">
-  <%= csrf_meta_tag %>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="Kw9rZYZ4iaMm-5HV0EzvK70u-Dfv4lfgBmm17-wtkrU" />
-
-  <!--========== Page Ttile ==========-->
-  <title>NAC-JAC - Organizer System - Eliminate stress of searching for items stored in your console..</title>
-
-  <!-- Google Font -->
-  <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
-
-  <!-- CSS Plugin Files -->
-  <%= stylesheet_link_tag "application", debug: true %>
-
-  <!--========== HTML5 shim and Respond.js (Required) ==========-->
-  <!--[if lt IE 9]>
-  <script src="assets/javascripts/lib/html5shiv.min.js"></script>
-  <script src="assets/javascripts/lib/respond.min.js"></script>
-  <![endif]-->
-
-</head>
-
-<body class="home" data-scroll-animation="true">
-
-<!--==========Preloader==========-->
-<div id="loading">
-  <div id="loading-center">
-    <div id="loading-center-absolute">
-      <div class="object" id="object_four"></div>
-      <div class="object" id="object_three"></div>
-      <div class="object" id="object_two"></div>
-      <div class="object" id="object_one"></div>
-    </div>
-  </div>
-</div>
-
-<!--==========Header==========-->
-<header class="row" id="header">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <!--========== Brand and toggle get grouped for better mobile display ==========-->
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#header"><%= image_tag('logo.png')%></a>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-
-      <!--========== Collect the nav links, forms, and other content for toggling ==========-->
-      <div class="collapse navbar-collapse" id="main-navbar">
-        <a href="#product-buy" class=" btn btn-warning pull-right hidden-sm hidden-xs btnBuyProducts">BUY IT NOW</a>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#product">Product</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <!--/*<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                  <li><a href="index.html">Pre-order (Email)</a></li>
-                  <li><a href="index_email.html">Email Signup (Mailchimp)</a></li>
-                  <li><a href="index_buy_paypal.html">Buy Now (PayPal)</a></li>
-                  <li><a href="index_kickstarter.html">Kickstarter Campaign</a></li>
-                  <li><a href="index_indegogo.html">Indegogo Campaign</a></li>
-                  <li><a href="index_boxed.html">Boxed Version</a></li>
-                  <li><a href="index_rtl.html">RTL Version</a></li>
-                  <li><a href="index_video.html">Video Background</a></li>
-                  <li class="divider"></li>
-                  <li><a href="blog.html">Blog</a></li>
-                  <li><a href="blog-single.html">Blog Single</a></li>
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="faq.html">FAQ</a></li>
-                  <li><a href="shortcodes.html">Shortcodes</a></li>
-              </ul>
-          </li>*/-->
-          <li><a href="#contact">contact</a></li>
-        </ul>
-      </div>
-      <!--========== /.navbar-collapse ==========-->
-    </div>
-    <!--========== /.container-fluid ==========-->
-  </nav>
-
-  <div class="top-banner row m0 text-center fadeInOnLoad">
-    <div class="container">
-      <h2>Nacjac - No More Clutter!</h2>
-      <p>Organizer System  for your Car, RV, Boat and more - Eliminate the stress of searching, Securing & Moving of items stored in your console.</p>
-      <a href="#product-choose" class="btn btn-primary btn-lg">BUY WITH PAYPAL</a>
-
-      <!--<div class="row apple-watch">
-          <img src="images/apple-watch.png" alt="" class="watch_img">
-      </div>-->
-    </div>
-  </div>
-</header>
-
 <!--==========The Product==========-->
 
 <section class="row mobile-app">
@@ -637,10 +523,12 @@ Copyright © All rights Reserved
       <div class="row contact-box flip-box-part">
         <h2>get in touch</h2>
         <ul class="nav">
-          <li><i class="fa fa-map-marker"></i>1326 N UNIVERSITY
-            <br>Nacogdoches, Texas 75961 USA</li>
-          <li><i class="fa fa-phone"></i>+1(936)462-8348
-            <br>+</li>
+          <li>
+            <i class="fa fa-map-marker"></i>
+            1326 N UNIVERSITY<br/>
+            Nacogdoches, Texas 75961 USA
+          </li>
+          <li><i class="fa fa-phone"></i>+1(936)462-8348</li>
           <li><i class="fa fa-envelope"></i>support@nacjac.com</li>
         </ul>
         <button class="flip-contact-box btn btn-block">contact us</button>
@@ -676,32 +564,6 @@ Copyright © All rights Reserved
   <!-- // End Contact Box -->
 </section>
 
-<!--==========Footer==========-->
-<footer class="row">
-  <div class="container">
-    <div class="row m0 social-links">
-      <ul class="nav">
-        <li class="wow fadeInUp"><a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li class="wow fadeInUp" data-wow-delay="0.1s"><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li class="wow fadeInUp" data-wow-delay="0.2s"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li class="wow fadeInUp" data-wow-delay="0.3s"><a href="#"><i class="fa fa-youtube"></i></a></li>
-        <li class="wow fadeInUp" data-wow-delay="0.4s"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-        <li class="wow fadeInUp" data-wow-delay="0.5s"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-      </ul>
-    </div>
-    <div class="row m0 menu-rights">
-      <ul class="nav footer-menu">
-        <li><a href="about.html">About</a></li>
-        <li><a href="terms-of-use.html">Terms of Use</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="#">Mobile App</a></li>
-        <li><a href="presskit.zip">PressKit</a></li>
-      </ul>
-      <p>Copyright © 2016.
-        <br class="small-divide"> All rights reserved</p>
-    </div>
-  </div>
-</footer>
 
 <!-- ============================================================
                         PRODUCT POPUP
@@ -799,12 +661,3 @@ Copyright © All rights Reserved
 </div>
 
 <!-- // End Product Popup Section -->
-
-<!--========== Javascript Files ==========-->
-<!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
-<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js" %>
-<%= javascript_include_tag "application" %>
-
-</body>
-
-</html>
