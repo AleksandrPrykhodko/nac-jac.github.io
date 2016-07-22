@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'privacy-policy' => 'pages#privacy_policy'
 
   post 'mail/contact' => 'mail#contact'
+  post 'mail/subscribe' => 'mail#subscribe'
 
   get '/prepare/:id' => 'items#prepare', as: :prepare
   post '/buy' => 'items#buy', as: :buy
