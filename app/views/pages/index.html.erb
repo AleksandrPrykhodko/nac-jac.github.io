@@ -262,7 +262,7 @@ Surjith S M / @surjithctly
                   </div>
                   <h4 class="title"><%= product.title %></h4>
                   <h5 class="category"><%= product.notes %></h5>
-                  <h4 class="price"><%= product.price %></h4>
+                  <h4 class="price">$<%= product.price %></h4>
                   <a href="#product-<%= product.id %>" class="btn">CHOOSE</a>
                 </div>
             <% end %>
@@ -608,7 +608,7 @@ Surjith S M / @surjithctly
                     <button type="submit" id="js-subscribe-btn"><%= image_tag('right-angle-white.png')%></button>
                 </span>
       </div>
-      <div id="js-subscribe-result" class="text-center" data-success-msg="Almost finished. Please check your email and verify." data-error-msg="Oops. Something went wrong.">
+      <div id="js-subscribe-result" class="text-center" data-success-msg="Great! We will update you on our news" data-error-msg="Oops. Something went wrong.">
         <p>
           <%= image_tag('protect.png')%>No Spam. We Promise. Unsubscribe anytime.
         </p>
