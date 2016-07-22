@@ -149,7 +149,7 @@
                   </div>
                   <h4 class="title"><%= product.title %></h4>
                   <h5 class="category"><%= product.notes.html_safe %></h5>
-                  <h4 class="price">$<%= product.price %></h4>
+                  <h4 class="price"><%= product.description.html_safe %></h4>
                   <a href="#product-choose-<%=product.id %>" class="btn btnChooseProduct">CHOOSE</a>
                 </div>
             <% end %>
@@ -443,7 +443,7 @@
           <article>  Dear Customer:<br/>
 
             Thank you for giving us the opportunity to better serve you. Please help us by taking a few minutes to tell us about our product that you have received so far. We appreciate your business and want to make sure we meet your expectations and improve our Product.</article>
-          <br></br>
+          <br/>
           Sincerely, Harold
       </div>
       <!--==========Member==========-->
@@ -581,8 +581,9 @@
           <input name="product_id" value="<%= product.id %>" type="hidden"/>
           <input name="product_title" value="<%= product.title %>" type="hidden"/>
           <h2 class="edition"><%= product.title %></h2>
-          <h2 class="price"><%= product.notes.html_safe %></h2>
+          <h2 class="price">$<%= product.price %></h2>
           <div class="row m0 description">
+            <p><%= product.notes.html_safe %></p>
             <p><%= product.description %></p>
           </div>
           <div class="choose-options row m0" id="js-choose-color">
