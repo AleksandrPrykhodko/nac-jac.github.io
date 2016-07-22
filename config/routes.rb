@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'terms-of-use' => 'pages#terms_of_use'
   get 'privacy-policy' => 'pages#privacy_policy'
 
+  post 'cart/calculate' => 'cart#calculate'
+
   post 'mail/contact' => 'mail#contact'
   post 'mail/subscribe' => 'mail#subscribe'
 

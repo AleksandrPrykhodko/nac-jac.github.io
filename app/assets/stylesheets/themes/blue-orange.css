@@ -627,7 +627,6 @@ footer.row .menu-rights p {
 }
 
 .product-img-gallery {
-  background: #f8f8f8;
 }
 
 #product-imgs .carousel-indicators li {
@@ -730,6 +729,12 @@ footer.row .menu-rights p {
 
 .product-desc .choose-form .submit-area .btn:hover, .product-desc .choose-form .submit-area .btn:focus {
   color: #fff;
+}
+
+.product-desc .choose-form .submit-area .btn-inactive {
+    background-color: #333 !important;
+    color: white !important;
+    cursor: not-allowed;
 }
 
 .product-desc .choose-form .bootstrap-touchspin input {

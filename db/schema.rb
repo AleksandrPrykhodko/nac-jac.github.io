@@ -11,16 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722111438) do
+ActiveRecord::Schema.define(version: 20160722084043) do
 
-  create_table "contacts", force: :cascade do |t|
-    t.string   "name"
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "cart_items", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "cart_id"
+    t.integer  "quantity"
+    t.decimal  "price",      precision: 10, scale: 2
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  add_index "cart_items", ["cart_id"], name: "index_cart_items_on_cart_id", using: :btree
+  add_index "cart_items", ["product_id"], name: "index_cart_items_on_product_id", using: :btree
+
+  create_table "carts", force: :cascade do |t|
     t.string   "email"
-    t.string   "subject"
-    t.string   "message"
+    t.text     "address"
+    t.string   "notes"
+    t.decimal  "price",      precision: 10, scale: 2
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  create_table "mail_subscriptions", force: :cascade do |t|
+    t.string   "email",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "mail_subscriptions", ["email"], name: "index_mail_subscriptions_on_email", unique: true, using: :btree
 
   create_table "mail_subscriptions", force: :cascade do |t|
     t.string   "email",      null: false
@@ -30,4 +53,17 @@ ActiveRecord::Schema.define(version: 20160722111438) do
 
   add_index "mail_subscriptions", ["email"], name: "index_mail_subscriptions_on_email", unique: true
 
+  create_table "products", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "notes"
+    t.string   "photo_url"
+    t.string   "slug"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.decimal  "price",       precision: 8, scale: 2
+  end
+
+  add_foreign_key "cart_items", "carts"
+  add_foreign_key "cart_items", "products"
 end
