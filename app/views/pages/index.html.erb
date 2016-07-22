@@ -261,9 +261,9 @@ Surjith S M / @surjithctly
                     <%= image_tag(product.photo_url)%>
                   </div>
                   <h4 class="title"><%= product.title %></h4>
-                  <h5 class="category"><%= product.notes %></h5>
+                  <h5 class="category"><%= product.notes.html_safe %></h5>
                   <h4 class="price">$<%= product.price %></h4>
-                  <a href="#product-<%= product.id %>" class="btn">CHOOSE</a>
+                  <a href="#product-choose-<%=product.id %>" class="btn btnChooseProduct">CHOOSE</a>
                 </div>
             <% end %>
           </div>
@@ -722,40 +722,21 @@ Surjith S M / @surjithctly
                         PRODUCT POPUP
      ============================================================ -->
 
-<% Item.all.each do |item| %>
-  <div class="row product-box mfp-hide" id="product-choose-<%= item[:id] %>">
+<% @products.each do |product| %>
+  <div class="row product-box mfp-hide" id="product-choose-<%= product.id %>">
     <button class="mfp-close custom_close" title="Close (Esc)" type="button">&#215;</button>
     <div class="product-img-gallery">
-      <div id="product-imgs" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#product-imgs" data-slide-to="0" class="active"></li>
-          <li data-target="#product-imgs" data-slide-to="1"></li>
-          <li data-target="#product-imgs" data-slide-to="2"></li>
-        </ol>
-
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <%= image_tag('the-watch-1.png', alt: 'watch-1')%>
-          </div>
-          <div class="item">
-            <%= image_tag('the-watch-2.png', alt: 'watch-2')%>
-          </div>
-          <div class="item">
-            <%= image_tag('the-watch-3.png', alt: 'watch-3')%>
-          </div>
-        </div>
-      </div>
+      <%= image_tag(product.photo_url)%>
     </div>
     <div class="product-desc">
-      <div id="js-product-info" class="product-info-<%= item[:id] %>">
+      <div id="js-product-info" class="product-info-<%= product.id %>">
         <!-- <h4 class="name">Smart Watch</h4> -->
-        <h2 class="edition"><%= item[:title] %></h2>
+        <h2 class="edition"><%= product.title %></h2>
         <!-- <h5 class="model">MODEL AS1500</h5> -->
         <!-- <h2 class="price"><del>$349</del>$299 <span class="label label-default">early bird offer</span></h2> -->
-        <h2 class="price">$<%= number_with_precision(item[:price], precision: 2) %></h2>
+        <h2 class="price"><%= product.notes.html_safe %></h2>
         <div class="row m0 description">
-          <p><%= item[:description] %></p>
+          <p><%= product.description %></p>
         </div>
         <div class="submit-area row m0">
           <%= link_to 'Checkout', prepare_path(1, format: :js), remote: true, class: 'btn btn-rounded btn-block' %>
