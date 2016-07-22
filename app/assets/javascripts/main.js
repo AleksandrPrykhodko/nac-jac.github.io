@@ -152,7 +152,7 @@ var cart = {
   /* ---------- PRODUCT POPUP ---------- */
 
 
-  $('.btnChooseProduct').magnificPopup({
+  $('.btnChooseProduct, .btnBuyProducts').magnificPopup({
     type: 'inline',
     mainClass: 'mfp-fade',
     midClick: true // mouse middle button click
