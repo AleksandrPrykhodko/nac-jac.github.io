@@ -164,27 +164,29 @@ var cart = {};
       open: function() {
         var content = '';
         var data = {};
+
         $.each(cart, function(_id, obj) {
           data[_id] = obj['qty'];
           content += '<div>' + obj['title'] + " : " + obj['qty'] + '</div>';
         });
         $('.products-selected').html(content);
 
+        if(content) {
+          // content available, it means - cart contains products
+          $('#btnCheckout').removeClass('btn-inactive');
+          $('.products-selected').show();
+          $('.products-not-selected').hide();
+        } else {
+          $('#btnCheckout').addClass('btn-inactive');
+          $('.products-selected').hide();
+          $('.products-not-selected').show();
+        }
+
         $.post({
           url: '/cart/calculate',
           data: {'form_data': JSON.stringify(data)}
         }, function(response) {
-          var total_price = response.total
-          if(total_price + '' === '0') {
-            $('#btnCheckout').addClass('btn-inactive');
-            $('.products-selected').hide();
-            $('.products-not-selected').show();
-          } else {
-            $('#btnCheckout').removeClass('btn-inactive');
-            $('.products-selected').show();
-            $('.products-not-selected').hide();
-          }
-
+          var total_price = response.total;
           $('#total_price').text(total_price);
           $('#total_cart_price').val(total_price);
           $('#form_data').val(JSON.stringify(response.form_data));
