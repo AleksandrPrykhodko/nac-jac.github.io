@@ -29,7 +29,7 @@ $(function() {
         errorPlacement: function(error, element) {}
     });
 
-    /* 
+    /*
     VALIDATE
     -------- */
 
@@ -56,7 +56,7 @@ $(function() {
 
             $("#js-contact-btn").attr("disabled", true);
 
-            /* 
+            /*
             CHECK PAGE FOR REDIRECT (Thank you page)
             ---------------------------------------- */
 
@@ -68,16 +68,23 @@ $(function() {
 
             $("#js-contact-btn").text('Please wait');
 
-            /* 
+            /*
             FETCH SUCCESS / ERROR MSG FROM HTML DATA-ATTR
             --------------------------------------------- */
 
             var success_msg = $('#js-contact-result').data('success-msg');
             var error_msg = $('#js-contact-result').data('error-msg');
 
-            var dataString = $(form).serialize();
+            var dataString = {
+                contact: {
+                    name: $(form).find('input[name="name"]').val(),
+                    email: $(form).find('input[name="email"]').val(),
+                    subject: $(form).find('input[name="subject"]').val(),
+                    message: $(form).find('textarea[name="message"]').val()
+                }
+            };
 
-            /* 
+            /*
              AJAX POST
              --------- */
 
