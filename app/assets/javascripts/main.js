@@ -166,7 +166,9 @@ var cart = {};
         var data = {};
         $.each(cart, function(_id, obj) {
           data[_id] = obj['qty'];
+          content += '<div>' + obj['title'] + " : " + obj['qty'] + '</div>';
         });
+        $('.products-selected').html(content);
 
         $.post({
           url: '/cart/calculate',
