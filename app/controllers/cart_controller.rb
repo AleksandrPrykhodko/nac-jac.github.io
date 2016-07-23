@@ -15,11 +15,56 @@ class CartController < ApplicationController
       _total_sum = 0
     end
 
-    render plain: _total_sum
+    render json: { total: _total_sum, form_data: _form_data }
   end
 
   def checkout
-    # save form & chosen products to cart / cart items
-    # submit paypal request
+    form_data = JSON.parse(params[:form_data]) rescue {}
+    buyer = Buyer.new buyer_params
+    cart = Cart.new email: buyer.email, address: buyer.address1, price: params[:price]
+    form_data.each do |id, qty|
+      product = Product.find(id.to_s)
+      if product
+        cart.cart_items << CartItem.new(product: product, quantity: qty.to_i, price: (product.price * qty.to_i))
+      end
+    end
+    cart.buyer = buyer
+    if cart.save
+      items = cart.cart_items.map do |cart_item|
+        {
+          notice_no: cart_item.product.title,
+          description: cart_item.product.description,
+          quantity: cart_item.quantity,
+          amount: cart_item.product.price * 100
+        }
+      end
+      response = GATEWAY.setup_purchase(
+        cart.price * 100,
+        ip: request.remote_ip,
+        return_url: confirm_url,
+        cancel_return_url: root_url,
+        currency: "USD",
+        allow_guest_checkout: true,
+        items: items
+      )
+      cart.update_attribute :token, response.token
+      redirect_to GATEWAY.redirect_url_for(response.token)
+    else
+      raise 'error occurred :('
+    end
+  end
+
+  def confirm
+    cart = Cart.find_by_token params[:token]
+    cart.update_attribute :completed, true if cart
+
+    # do something instead of redirect
+    redirect_to root_path
+  end
+
+  private
+
+  def buyer_params
+    params.permit(:first_name, :last_name, :email, :address1, :address2, :state, :zip, :country)
   end
 end
