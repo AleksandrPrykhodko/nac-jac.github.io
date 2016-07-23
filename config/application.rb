@@ -26,9 +26,9 @@ module NacJacGithubIo
 
     ActiveMerchant::Billing::Base.mode = :test
     ::GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(
-        :login => 'uncoder-facilitator_api1.gmail.com',
-        :password => '2H5MSMHW5QU6KQTX',
-        :signature => 'AFcWxV21C7fd0v3bYYYRCpSSRl31AWpV87FZYT2XbbE20mwF1QflRrHS'
+        :login => ENV['PAYPAL_MERCHANT_LOGIN'],
+        :password => ENV['PAYPAL_MERCHANT_PASSWORD'],
+        :signature => ENV['PAYPAL_MERCHANT_SIGNATURE']
     )
   end
 end

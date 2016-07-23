@@ -28,7 +28,7 @@ gem 'activemerchant'
 gem 'sendgrid'
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'dotenv-rails'
   gem 'byebug'
 end
 
