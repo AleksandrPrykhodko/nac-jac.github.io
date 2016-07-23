@@ -1,4 +1,7 @@
+CartItem.delete_all
+Cart.delete_all
 Product.delete_all
+
 Product.create(
     [
         {
