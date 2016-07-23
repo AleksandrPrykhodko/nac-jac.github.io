@@ -33,14 +33,14 @@ Product.create(
             description: '$60',
             photo_url: 'products/NAC-JAC-TRAYS.jpg',
             price: 60.00
-        },
-        {
-            id: 4,
-            title: 'Nac-Jac best Value',
-            slug: 'nac-jac-best-value',
-            notes: '2 Tray 2 folders',
-            description: '$249.00',
-            photo_url: 'products/NAC-JAC-BEST-VALUE.jpg',
-            price: 249.00
-        }
+        }#,
+        # {
+        #     id: 4,
+        #     title: 'Nac-Jac best Value',
+        #     slug: 'nac-jac-best-value',
+        #     notes: '2 Tray 2 folders',
+        #     description: '$249.00',
+        #     photo_url: 'products/NAC-JAC-BEST-VALUE.jpg',
+        #     price: 249.00
+        # }
     ])
