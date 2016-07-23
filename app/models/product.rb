@@ -5,13 +5,16 @@ class Product < ActiveRecord::Base
   before_create :make_slug
 
   def calculate_price(quantity)
-    if slug == 'nac-jac-file-folders' && quantity > 1
-      total = 15 * quantity
-    else
-      total = price * quantity
-    end
+    # https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/Appx_websitestandard_htmlvariables/#shopping-cart-variables
+    # see discount rate discount_rate, discount_rate2
 
-    total
+    # if slug == '--nac-jac-file-folders' && quantity > 1
+    #   total = 15 * quantity
+    # else
+    #   total = price * quantity
+    # end
+
+    price * quantity
   end
 
   private

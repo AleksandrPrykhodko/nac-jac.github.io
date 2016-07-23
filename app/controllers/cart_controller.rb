@@ -1,4 +1,6 @@
 class CartController < ApplicationController
+  include ActionView::Helpers::NumberHelper
+
   def calculate
     form_data = JSON.parse params[:form_data] rescue {}
     total_amount = calculate_products_price form_data
@@ -22,14 +24,15 @@ class CartController < ApplicationController
     if cart.save
       items = cart.cart_items.map do |cart_item|
         {
-            notice_no: cart_item.product.title,
-            description: cart_item.product.description,
+            name: cart_item.product.title,
+            description: cart_item.product.title,
             quantity: cart_item.quantity,
-            amount: cart_item.product.calculate_price(cart_item.quantity)
+            amount: (cart_item.product.price * 100).to_i
         }
       end
+
       response = GATEWAY.setup_purchase(
-          cart.price * 100,
+          (cart.price * 100).to_i,
           ip: request.remote_ip,
           return_url: confirm_url,
           cancel_return_url: root_url,

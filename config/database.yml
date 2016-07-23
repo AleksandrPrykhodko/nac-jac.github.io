@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
-  username: postgres
-  password:
+  username: admin
+  password: qwa
   host: 127.0.0.1
   encoding: utf8
   template: template0
