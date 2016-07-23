@@ -43,6 +43,7 @@ class CartController < ApplicationController
       cart.update_attribute :token, response.token
       redirect_to GATEWAY.redirect_url_for(response.token)
     else
+      p cart.errors
       raise 'error occurred :('
     end
   end
