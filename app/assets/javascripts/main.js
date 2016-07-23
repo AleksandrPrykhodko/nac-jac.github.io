@@ -210,6 +210,21 @@ var cart = {};
     }
 
     $.magnificPopup.close();
+
+    // calculate total qty
+    var total_qty = 0;
+    var total_qty_text = '';
+    $.each(cart, function(_id, obj) {
+      total_qty += parseInt(obj['qty']);
+    });
+
+    if (total_qty == 1) {
+      total_qty_text = '[ 1 item]';
+    } else if (total_qty > 1) {
+      total_qty_text = '[ ' + total_qty + ' items]';
+    }
+
+    $("#shoppingCartQty").text(total_qty_text);
   });
 
 
