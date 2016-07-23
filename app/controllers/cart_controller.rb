@@ -21,11 +21,15 @@ class CartController < ApplicationController
   def checkout
     form_data = JSON.parse(params[:form_data]) rescue {}
     buyer = Buyer.new buyer_params
+
+    # FIXME - security issue
+    # Cart price should be recalculated locally(instead of use amount from params) - see product.calculate_price
+    # sum of "product.calculate_price(qty.to_i)"
     cart = Cart.new email: buyer.email, address: buyer.address1, price: params[:price]
     form_data.each do |id, qty|
       product = Product.find(id.to_s)
       if product
-        cart.cart_items << CartItem.new(product: product, quantity: qty.to_i, price: (product.price * qty.to_i))
+        cart.cart_items << CartItem.new(product: product, quantity: qty.to_i, price: product.price)
       end
     end
     cart.buyer = buyer
@@ -35,7 +39,7 @@ class CartController < ApplicationController
           notice_no: cart_item.product.title,
           description: cart_item.product.description,
           quantity: cart_item.quantity,
-          amount: cart_item.product.price * 100
+          amount: cart_item.product.calculate_price(cart_item.quantity)
         }
       end
       response = GATEWAY.setup_purchase(
@@ -43,7 +47,7 @@ class CartController < ApplicationController
         ip: request.remote_ip,
         return_url: confirm_url,
         cancel_return_url: root_url,
-        currency: "USD",
+        currency: 'USD',
         allow_guest_checkout: true,
         items: items
       )
