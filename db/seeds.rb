@@ -17,8 +17,10 @@ Product.create(
             id: 2,
             title: 'NAC-JAC FILE FOLDERS',
             slug: 'nac-jac-file-folders',
-            notes: 'Save & $3.99',
-            description: '$16.99 & OR Two for $30',
+            # notes: 'Save & $3.99',
+            notes: '---',
+            # description: '$16.99 & OR Two for $30',
+            description: '$16.99',
             photo_url: 'products/NAC-JAC-FILE-FOLDERS.jpg',
             price: 16.99
         },
@@ -26,7 +28,8 @@ Product.create(
             id: 3,
             title: 'NAC-JAC TRAYS',
             slug: 'NAC-JAC-TRAYS',
-            notes: 'Set of Four --Save $7.99',
+            # notes: 'Set of Four --Save $7.99',
+            notes: '---',
             description: '$60',
             photo_url: 'products/NAC-JAC-TRAYS.jpg',
             price: 60.00
