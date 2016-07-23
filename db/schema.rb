@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722084043) do
+ActiveRecord::Schema.define(version: 20160722235917) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "buyers", force: :cascade do |t|
+    t.integer  "cart_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "buyers", ["cart_id"], name: "index_buyers_on_cart_id", using: :btree
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "product_id"
@@ -33,8 +49,10 @@ ActiveRecord::Schema.define(version: 20160722084043) do
     t.text     "address"
     t.string   "notes"
     t.decimal  "price",      precision: 10, scale: 2
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
+    t.boolean  "completed",                           default: false
+    t.string   "token"
   end
 
   create_table "mail_subscriptions", force: :cascade do |t|

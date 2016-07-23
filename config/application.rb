@@ -25,10 +25,10 @@ module NacJacGithubIo
     config.assets.paths << Rails.root.join('/app/assets/fonts')
 
     ActiveMerchant::Billing::Base.mode = :test
-      ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+    ::GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(
         :login => 'uncoder-facilitator_api1.gmail.com',
         :password => '2H5MSMHW5QU6KQTX',
         :signature => 'AFcWxV21C7fd0v3bYYYRCpSSRl31AWpV87FZYT2XbbE20mwF1QflRrHS'
-      )
+    )
   end
 end

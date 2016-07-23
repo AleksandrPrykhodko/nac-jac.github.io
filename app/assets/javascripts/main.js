@@ -171,7 +171,8 @@ var cart = {};
         $.post({
           url: '/cart/calculate',
           data: {'form_data': JSON.stringify(data)}
-        }, function(total_price) {
+        }, function(response) {
+          var total_price = response.total
           if(total_price + '' === '0') {
             $('#btnCheckout').addClass('btn-inactive');
             $('.products-selected').hide();
@@ -183,6 +184,8 @@ var cart = {};
           }
 
           $('#total_price').text(total_price);
+          $('#total_cart_price').val(total_price);
+          $('#form_data').val(JSON.stringify(response.form_data));
         });
       },
       close: function() {
