@@ -6,7 +6,12 @@ Rails.application.routes.draw do
   get 'terms-of-use' => 'pages#terms_of_use'
   get 'privacy-policy' => 'pages#privacy_policy'
 
+  post 'cart/calculate' => 'cart#calculate'
+  post 'cart/checkout' => 'cart#checkout', as: :checkout
+  get 'cart/confirm' => 'cart#confirm', as: :confirm
+
   post 'mail/contact' => 'mail#contact'
+  post 'mail/subscribe' => 'mail#subscribe'
 
   get '/prepare/:id' => 'items#prepare', as: :prepare
   post '/buy' => 'items#buy', as: :buy

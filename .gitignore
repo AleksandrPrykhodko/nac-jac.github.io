@@ -13,3 +13,6 @@
 # IDE
 .idea/
 *.iml
+
+public/assets/
+.env
