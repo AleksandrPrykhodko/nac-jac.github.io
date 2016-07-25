@@ -1,44 +1,44 @@
-<div class="form-group text-center"><a href="#" class="btn btn-back" id="prev-product-info">Go Back</a></div>
+<%= form_tag checkout_path, method: :post, class: 'choose-form row m0', id: 'checkout-form' do %>
+  <div class="personal-info slide-in-right" id="js-personal-info">
+    <%= hidden_field_tag :form_data, nil, id: 'form_data' %>
+    <%= hidden_field_tag :price, nil, id: 'total_cart_price' %>
 
-
-<%= form_tag buy_path, method: :post do %>
-  <%= hidden_field_tag :id, params[:id] %>
-
-  <div class="row">
-    <div class="form-group col-sm-6">
-      <%= text_field_tag :first_name, nil,  class: 'form-control', placeholder: 'First Name', required: true %>
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <%= text_field_tag :first_name, nil,  class: 'form-control', placeholder: 'First Name', required: true %>
+      </div>
+      <div class="form-group col-sm-6">
+        <%= text_field_tag :last_name, nil,  class: 'form-control', placeholder: 'Last Name', required: true %>
+      </div>
     </div>
-    <div class="form-group col-sm-6">
-      <%= text_field_tag :last_name, nil,  class: 'form-control', placeholder: 'Last Name', required: true %>
+    <div class="form-group">
+      <%= email_field_tag :email, nil,  class: 'form-control', placeholder: 'Email Address', required: true %>
     </div>
-  </div>
-  <div class="form-group">
-    <%= email_field_tag :email, nil,  class: 'form-control', placeholder: 'Email Address', required: true %>
-  </div>
 
-  <div class="form-group">
-    <%= text_field_tag :address1, nil,  class: 'form-control', placeholder: 'Address Line 1', required: true %>
-  </div>
-
-  <div class="form-group">
-    <%= text_field_tag :address2, nil,  class: 'form-control', placeholder: 'Address Line 2', required: true %>
-  </div>
-
-  <div class="row">
-    <div class="form-group col-sm-6">
-      <%= text_field_tag :state, nil,  class: 'form-control', placeholder: 'State', required: true %>
+    <div class="form-group">
+      <%= text_field_tag :address1, nil,  class: 'form-control', placeholder: 'Address Line 1', required: true %>
     </div>
-    <div class="form-group col-sm-6">
-      <%= text_field_tag :zip, nil,  class: 'form-control', placeholder: 'Zip code', required: true %>
+
+    <div class="form-group">
+      <%= text_field_tag :address2, nil,  class: 'form-control', placeholder: 'Address Line 2', required: false %>
     </div>
+
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <%= text_field_tag :state, nil,  class: 'form-control', placeholder: 'State', required: true %>
+      </div>
+      <div class="form-group col-sm-6">
+        <%= text_field_tag :zip, nil,  class: 'form-control', placeholder: 'Zip code', required: true %>
+      </div>
+    </div>
+
+    <div class="form-group">
+    <%= select_tag :country, options_for_select([['United States', 'United States'], ['Canada', 'Canada']]), prompt: 'Choose a country', class: 'form-control', required: true %>
+    </div>
+
+    <br/>
+    <br/>
+
+    <%= submit_tag 'PAY WITH PAYPAL', class: 'btn btn-rounded btn-block', id: 'btnCheckout' %>
   </div>
-
-  <div class="form-group">
-
-  <%= select_tag :country, options_for_select([['United States', 'United States'], ['Canada', 'Canada']]), prompt: 'Choose a country', class: 'form-control', required: true %>
-
-  <br/>
-  <br/>
-
-  <%= submit_tag 'PAY WITH PAYPAL', class: 'btn btn-rounded btn-block' %>
 <% end %>
