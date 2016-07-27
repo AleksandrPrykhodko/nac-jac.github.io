@@ -1,9 +1,10 @@
 class PagesController < ApplicationController
   def index
+    @products = Product.all
   end
 
   def about
-    end
+  end
 
   def terms_of_use
   end

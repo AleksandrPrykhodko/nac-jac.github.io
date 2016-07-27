@@ -120,7 +120,7 @@ header.alt-bg .navbar.is-scrolling .navbar-header .navbar-toggle span {
 }
 
 .top-banner h2 {
-  color: #374048;
+  color: #25428d;
 }
 
 .top-banner p {
@@ -137,11 +137,11 @@ body.home header .navbar {
 }
 
 .section-header h2 {
-  color: #0a0a0a;
+  color: #d02630;
 }
 
 .section-header p {
-  color: #ff6622;
+  color: #561313;
 }
 
 .section-header.v2:after {
@@ -184,7 +184,7 @@ body.home header .navbar {
 }
 
 .work-process h3 {
-  color: #374048;
+  color: #0084ff;
 }
 
 .work-process p {
@@ -231,7 +231,7 @@ body.home header .navbar {
 }
 
 .collections .item .price {
-  color: #ff6622;
+  color: #d02630;
 }
 
 /*=====The Watch=====*/
@@ -245,7 +245,7 @@ body.home header .navbar {
 
 /*=====Split Columns=====*/
 .split-column .texts h2 {
-  color: #374048;
+  color: #d02630;
 }
 
 .split-column .texts p {
@@ -284,7 +284,7 @@ body.home header .navbar {
 }
 
 .tech-specs-row h4 {
-  color: #374048;
+  color: #d02630;
 }
 
 .tech-specs-row ul li {
@@ -627,7 +627,6 @@ footer.row .menu-rights p {
 }
 
 .product-img-gallery {
-  background: #f8f8f8;
 }
 
 #product-imgs .carousel-indicators li {
@@ -730,6 +729,12 @@ footer.row .menu-rights p {
 
 .product-desc .choose-form .submit-area .btn:hover, .product-desc .choose-form .submit-area .btn:focus {
   color: #fff;
+}
+
+.product-desc .choose-form .submit-area .btn-inactive {
+    background-color: #333 !important;
+    color: white !important;
+    cursor: not-allowed;
 }
 
 .product-desc .choose-form .bootstrap-touchspin input {

@@ -43,7 +43,7 @@ $(function() {
         }
     });
 
-    /* 
+    /*
     VALIDATE
     -------- */
 
@@ -52,9 +52,9 @@ $(function() {
     }).validate({
         rules: {
             /* uncomment if Name is needed */
-            /* 
+            /*
             first_name: "required",
-            last_name: "required", 
+            last_name: "required",
             */
             email: {
                 required: true,
@@ -64,7 +64,7 @@ $(function() {
         messages: {
             /*
             first_name: "Your first name please",
-            last_name: "Your last name please", 
+            last_name: "Your last name please",
             */
             email: "Please enter your email address"
         },
@@ -72,7 +72,7 @@ $(function() {
 
             $("#js-subscribe-btn").attr("disabled", true);
 
-            /* 
+            /*
              CHECK PAGE FOR REDIRECT (Thank you page)
              ---------------------------------------- */
 
@@ -84,23 +84,24 @@ $(function() {
 
             $("#js-subscribe-result").fadeIn("slow").html('<p class="help-block">Please wait...</p>');
 
-            /* 
+            /*
              FETCH SUCCESS / ERROR MSG FROM HTML DATA-ATTR
              --------------------------------------------- */
 
             var success_msg = $('#js-subscribe-result').data('success-msg');
             var error_msg = $('#js-subscribe-result').data('error-msg');
 
-            var dataString = $(form).serialize();
+            var dataString = {mail_subscription : {email: $(form).find('input[name="email"]').val()}};
 
-            /* 
+            /*
              AJAX POST
              --------- */
 
             $.ajax({
                 type: "POST",
                 data: dataString,
-                url: "php/subscribe.php",
+                beforeSend: function(xhr) {xhr.setRequestHeader('authenticity_token', $('meta[name="csrf-token"]').attr('content'))},
+                url: "mail/subscribe",
                 cache: false,
                 success: function(d) {
                     $(".form-group").removeClass("has-success");
@@ -117,7 +118,8 @@ $(function() {
                     $("#js-subscribe-btn").attr("disabled", false);
                 },
                 error: function(d) {
-                    $('#js-subscribe-result').fadeIn('slow').html('<p class="help-block text-danger"> Sorry. Cannot access the PHP Server</p>').delay(3000).fadeOut('slow');
+                    var errors = d.responseJSON;
+                    $('#js-subscribe-result').fadeIn('slow').html('<p class="help-block text-danger"> Sorry. ' + (errors.email.length ? errors.email[0] : ' Cannot access the Server') + '</p>').delay(3000).fadeOut('slow');
                     $("#js-subscribe-btn").attr("disabled", false);
                 }
             });
