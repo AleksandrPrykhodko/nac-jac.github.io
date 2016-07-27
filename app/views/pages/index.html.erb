@@ -1,0 +1,612 @@
+<!--==========The Product==========-->
+
+<section class="row mobile-app">
+  <div class="container" id="product">
+    <div class="row">
+      <div class="col-sm-6 col-sm-push-6 wow fadeIn">
+        <h2>NAC-JAC SYSTEM</h2>
+        <p>is portable so the product can be used in your Truck, SUV, RV, Travel Trailer, Home, Shop, Business and more.</p>
+        <div class="row m0 downloads-btns">
+          <a href="#" class="dload-link"><%= image_tag('app-store.png')%></a>
+          <a href="#" class="dload-link"><%= image_tag('ford.png')%></a>
+          <a href="#" class="dload-link"><%= image_tag('chevy.png')%></a>
+          <a href="#" class="dload-link"><%= image_tag('gmc.png')%></a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-sm-pull-6 wow fadeInUp">
+        <%= image_tag('app-screen.png', class: 'mobile-img')%>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--==========How its Works==========-->
+<section class="row how-it-works">
+  <div class="container">
+    <div class="row section-header v2 wow fadeInUp">
+      <h2>how it works</h2>
+      <p>Each tray has removable dividers so that you can determine what size items are stored. (File folder are also available)</p>
+    </div>
+    <div class="row work-processes">
+      <!--==========Work Process==========-->
+      <div class="col-sm-4 work-process wow fadeIn">
+        <div class="row m0 process-icon">
+          <%= image_tag('desktop.png')%>
+        </div>
+        <h3>Tray</h3>
+        <p>Items of varying size and shapes can be easily stored and retrieved.</p>
+      </div>
+      <!--==========Work Process==========-->
+      <div class="col-sm-4 work-process wow fadeIn" data-wow-delay="0.5s">
+        <div class="row m0 process-icon">
+          <%= image_tag('toggles.png')%>
+        </div>
+        <h3>Stacked Trays</h3>
+        <p>Because the Nac-Jac trays stack and lock hundreds of items can be stored in one area.</p>
+      </div>
+      <!--==========Work Process==========-->
+      <div class="col-sm-4 work-process wow fadeIn" data-wow-delay="1s">
+        <div class="row m0 process-icon">
+          <%= image_tag('trophy.png')%>
+        </div>
+        <h3>Trays & Folders</h3>
+        <p>Folders are available to be used with the trays for addition documents - books - magazines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--==========The Benefits==========-->
+<section class="row the-benefits" id="features">
+  <div class="container">
+    <div class="row section-header wow fadeInUp">
+      <h2>The Benefits</h2>
+      <p>The NAC-JAC organizer system eliminates stress of searching for items in your Truck or SUV console and after retrieving those items ensures they are stored safely from potential damage or lost.</p>
+    </div>
+    <div class="row benefit-notes">
+
+      <!--==========Left Right Content==========-->
+      <section class="row left-right-contents">
+        <div class="container">
+          <div class="row ">
+            <div class="col-sm-12 col-md-4 col-md-push-4 text-center wow fadeIn">
+              <%= image_tag('apple-watch-3.png')%>
+            </div>
+            <div class="col-md-4 col-sm-6 col-md-pull-4 left-content">
+              <div class="media wow fadeInUp">
+                <div class="media-left">
+                  <span><i class="li_key"></i></span>
+                </div>
+                <div class="media-body">
+                  <h4>Secure</h4>
+                  <p>Ensures you those items are stored safely from potential damage or being lost  </p>
+                </div>
+              </div>
+              <div class="media wow fadeInUp" data-wow-delay="0.3s">
+                <div class="media-left">
+                  <span><i class="li_user"></i></span>
+                </div>
+                <div class="media-body">
+                  <h4>Customize for your Needs</h4>
+                  <p>With Each tray having adjustable dividers items of different sizes can be stored</p>
+                </div>
+              </div>
+              <div class="media wow fadeInUp" data-wow-delay="0.6s">
+                <div class="media-left">
+                  <span><i class="li_diamond"></i></span>
+                </div>
+                <div class="media-body">
+                  <h4>Portable & Light in Weight</h4>
+                  <p>For easy on the go</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 right-content">
+              <div class="media wow fadeInUp">
+                <div class="media-left">
+                  <span><i class="li_like"></i></span>
+                </div>
+                <div class="media-body">
+                  <h4>Use in Variety of settings</h4>
+                  <p>Truck, SUV, RV, Travel Trailer & more</p>
+                </div>
+              </div>
+              <div class="media wow fadeInUp" data-wow-delay="0.3s">
+                <div class="media-left">
+                  <span><i class="li_user"></i></span>
+                </div>
+                <div class="media-body">
+                  <h4>Patent Pending</h4>
+                  <p>Nac-Jac trays stack and lock  </p>
+                </div>
+              </div>
+              <div class="media wow fadeInUp" data-wow-delay="0.6s">
+                <div class="media-left">
+                  <span><i class="li_clock"></i></span>
+                </div>
+                <div class="media-body">
+                  <h4>Made in America</h4>
+                  <p>Invented and manufactured in the United States keeping Americans Employed  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==========Our  PRODUCTS==========-->
+      <section class="row our-collection">
+        <div class="container">
+          <div class="row section-header wow fadeInUp">
+            <h2>ORDER NOW!</h2>
+            <p>Please Review our Vehicle Make/Model  section below before ordering to determine quantities for your Pick-Up or SUV </p>
+          </div>
+          <div class="row collections">
+            <% @products.each do |product| %>
+                <div class="col-sm-6 col-md-3 item wow fadeIn">
+                  <div class="row m0 featured-img">
+                    <%= image_tag(product.photo_url)%>
+                  </div>
+                  <h4 class="title"><%= product.title %></h4>
+                  <h5 class="category"><%= product.notes.html_safe %></h5>
+                  <h4 class="price"><%= product.description.html_safe %></h4>
+                  <a href="#product-choose-<%=product.id %>" class="btn btnChooseProduct">CHOOSE</a>
+                </div>
+            <% end %>
+          </div>
+        </div>
+      </section>
+
+      <!--==========Tech Specs==========-->
+      <section class="row tech-specs">
+        <div class="container">
+          <div class="row section-header wow fadeInUp">
+            <h2>VEHICLE MAKE / MODEL SELECTION</h2>
+            <p>The NAC-JAC system can be used in the following Vehicle</p>
+          </div>
+          <!--==========Tech Specs Row==========-->
+          <div class="row tech-specs-row">
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4>FORDS</h4>
+              <ul class="nav">
+                <li>PICK-UPS</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4>MODEL & YEAR</h4>
+              <ul class="nav">
+                <li>F-150 2003-Current</li>
+                <li>F-250 2003-Current</li>
+                <li>F-350 2003-Current</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4># Of Trays / # File System</h4>
+              <ul class="nav">
+                <li>4 Trays / N/A</li>
+                <li>4 Trays / With 2 File Folders</li>
+                <li>4 Trays / With 2 File Folders</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4>CHEVROLET</h4>
+              <ul class="nav">
+                <li>PICK-UPS</li>
+                <li>HIGH COUNTRY</li>
+                <li>SUBURBANS</li>
+                <li>TAHOES</li>
+
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4>MODEL & YEAR</h4>
+              <ul class="nav">
+                <li>2003-Current</li>
+                <li>2015-Current</li>
+                <li>2003-Current</li>
+                <li>2003-Current</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4># Of Trays / # File System</h4>
+              <ul class="nav">
+                <li>3 Trays / N/A</li>
+                <li>4 Trays / With 2 File Folders</li>
+                <li>3 Trays / N/A</li>
+                <li>3 Trays / N/A</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4>GMCs</h4>
+              <ul class="nav">
+                <li>PICK UPS</li>
+                <li>YUKONS</li>
+                <li>ESCALADES</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4>MODEL & YEAR</h4>
+              <ul class="nav">
+                <li>2003-Current</li>
+                <li>2003-Current</li>
+                <li>2003-Current</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4># Of Trays / # File System</h4>
+              <ul class="nav">
+                <li>3 Trays / With 2 File Folders</li>
+                <li>3 Trays / N/A</li>
+                <li>3 Trays / N/A</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4>TOYOTAS</h4>
+              <ul class="nav">
+                <li>TACOMA</li>
+                <li>TUNDRA</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="2.1s">
+              <h4>MODEL & YEAR</h4>
+              <ul class="nav">
+                <li>2003-Current</li>
+                <li>2003-Current</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 tech-spec wow fadeIn" data-wow-delay="0.5s">
+              <h4># Of Trays / # File System</h4>
+              <ul class="nav">
+                <li>3 Trays / N/A</li>
+                <li>4 Trays / With 2 File Folders</li>
+              </ul>
+            </div>
+
+          </div>
+          <!--==========Tech Specs Row==========-->
+          <div class="row tech-specs-row">
+          </div>
+          <!--==========Tech Specs Row==========-->
+          <div class="row tech-specs-row">
+          </div>
+        </div>
+      </section>
+      <!--==========Desclimer==========-->
+      <div class="row section-header wow fadeInUp">
+        <h4>Disclaimer</h4>
+        <p>All makes/models with a fold-up console that creates a 3rd front seat when folded up the NAC-JAC System will not work!</p>
+      </div>
+
+
+      <!--==========The Watch==========-->
+      <!--<section class="row the-watch">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-5 col-md-offset-1 text-center the-watch-img wow zoomIn">
+                      <img src="images/the-watch.png" alt="" class="img-responsive">
+                  </div>
+                  <div class="col-md-6 the-watch-features">
+                      <div class="row section-header v3 wow fadeIn">
+                          <h2>The Watch</h2>
+                          <p>With an image in the side of this conetent, you can use this section to write about some cool thing about your product or its features.</p>
+                      </div>
+                      <ul class="nav">
+                          <li class="wow fadeIn" data-wow-delay="0.2s">Compatible with all devices</li>
+                          <li class="wow fadeIn" data-wow-delay="0.4s">Android and iOS Support</li>
+                          <li class="wow fadeIn" data-wow-delay="0.6s">Activity &amp; Health Tracker</li>
+                          <li class="wow fadeIn" data-wow-delay="0.8s">Read &amp; reply to messages</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </section>-->
+
+      <!--==========Split Columns==========-->
+      <section class="row split-columns">
+        <div class="row m0 split-column wow fadeIn">
+          <div class="col-sm-6 image text-right">
+            <%= image_tag('split-1.jpg')%>
+          </div>
+          <div class="col-sm-6 texts">
+            <div class="texts-inner row m0">
+              <h2><<--You Can Go From This </h2>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="row m0 split-column wow fadeIn">
+          <div class="col-sm-6 col-sm-push-6 image">
+            <%= image_tag('split-2.jpg')%>
+          </div>
+          <div class="col-sm-6 col-sm-pull-6 texts">
+            <div class="texts-inner row m0">
+              <h2>To This -->></h2>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==========Reviews==========-->
+      <section class="row reviews" id="reviews">
+        <div class="container">
+          <div class="row section-header wow fadeInUp">
+            <h2>Reviews</h2>
+            <p>Don't take our word. See what our experts say about NAC-JAC organization system. We have recieved 1000's of positive reviews.</p>
+          </div>
+          <div class="row">
+            <!--==========Review==========-->
+            <div class="review col-sm-4 wow fadeIn">
+              <%= image_tag('quote.png', class: 'review-sign')%>
+              <p>Wow! Pretty Neat .Why hasn't somebody done this before? This can't be the only product out there ..you have a winner!</p>
+              <img src="" alt="" class="reviewer">
+            </div>
+            <!--==========Review==========-->
+            <div class="review col-sm-4 wow fadeIn" data-wow-delay="0.3s">
+              <%= image_tag('quote.png', class: 'review-sign')%>
+              <p>What a large wasted space of area in my console! Thanks! NAC-JAC my items are now organized.</p>
+              <img src="" alt="" class="reviewer">
+            </div>
+            <!--==========Review==========-->
+            <div class="review col-sm-4 wow fadeIn" data-wow-delay="0.6s">
+              <%= image_tag('quote.png', class: 'review-sign')%>
+              <p>Amazing product --it just works!</p>
+              <img src="" alt="" class="reviewer">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==========Featured On==========-->
+      <!--<section class="row  featured-on">
+          <div class="container">
+              <div class="row">
+                  <h3>As featured on</h3>
+                  <ul class="nav nav-justified">
+                      <li class="wow fadeInUp" data-wow-delay="0.2s"><img src="images/featured1.png" alt=""></li>
+                      <li class="wow fadeInUp" data-wow-delay="0.4s"><img src="images/featured2.png" alt=""></li>
+                      <li class="wow fadeInUp" data-wow-delay="0.6s"><img src="images/featured3.png" alt=""></li>
+                      <li class="wow fadeInUp" data-wow-delay="0.8s"><img src="images/featured4.png" alt=""></li>
+                      <li class="wow fadeInUp" data-wow-delay="1s"><img src="images/featured5.png" alt=""></li>
+                      <li class="wow fadeInUp" data-wow-delay="1.2s"><img src="images/featured6.png" alt=""></li>
+                  </ul>
+              </div>
+          </div>
+      </section>-->
+
+      <!--==========FAQS==========-->
+      <!-- <section class="row faqs">
+           <div class="container">
+               <div class="row section-header wow fadeInUp">
+                   <h2>faq</h2>
+                   <p>Got questions? We’ve got answers. If you have some other questions, feel free to send us an email to <a href="#">hello@product.com</a></p>
+               </div>
+               <div class="row">
+                   <!--==========Faq==========-->
+      <!--<div class="col-sm-6 faq wow fadeInUp">
+          <h4>What is Watch? How it works?</h4>
+          <p>Watch took center stage at this year's Product Show with a preview of watch OS 2. The next generation of Watch software is packed with features that just might turn the device from a nice-to-have into a must-have. If you already own an Apple Watch, you'll have to live with the old software until fall. You’ll love it at the first use.</p>
+      </div>-->
+      <!--==========Faq==========-->
+      <!--<div class="col-sm-6 faq wow fadeInUp">
+          <h4>How the watch is made?</h4>
+          <p>Watch has an anodized aluminum case (which is lighter than stainless steel) in silver or space gray, and the face is Ion-X glass, which also designed to be hard and rugged (as well as a little bit lighter) than the sapphire. It’s definitely the lightest of the three Apple Watch editions, making it an ideal exercise companion. </p>
+      </div>-->
+      <!--==========Faq==========-->
+      <!--<div class="col-sm-6 faq wow fadeInUp" data-wow-delay="0.3s">
+          <h4>Can I swap out the watch band?</h4>
+          <p>Absolutely. Watch comes with six bands that are easy to mix and match any band with any watch. You can swap them out as your heart desires without the aid of any tools—as long as the band and watch are the same size. (The Leather Loop band, for example, only fits 42mm watches, not the smaller 38mm size.) </p>
+      </div>-->
+      <!--==========Faq==========-->
+      <!--<div class="col-sm-6 faq wow fadeInUp" data-wow-delay="0.3s">
+          <h4>So it’s a watch and a fitness tracker?</h4>
+          <p>The accelerometer lets the watch count your steps, and it extrapolate distance on its own, or rely on the GPS in the paired Phone to trace your exact route. That step data comes in handy for two of the apps included on the watch: Activity and Workout. Both of the watch’s fitness apps sync data back to the Health and Fitness apps on your Phone.</p>
+      </div>-->
+    </div>
+  </div>
+</section>-->
+
+
+<!--==========Team==========-->
+
+<!--==========Team==========-->
+<section class="row team">
+  <div class="container">
+
+    <div class="row team_members">
+      <!--==========Member==========-->
+      <div class="col-md-3 col-sm-6 member wow fadeInUp">
+        <div class="row m0 inner">
+          <div class="row m0 image">
+            <%= image_tag('team-1.jpg')%>
+          </div>
+          <div class="texts row m0">
+            <h4>Harold "Dink" Johnson</h4>
+            <h5>Founder, Investor & Daily User</h5>
+          </div>
+        </div>
+      </div>
+      <div class="row section-header wow fadeInUp">
+        <h3></h3>
+
+
+        <p><%= image_tag('quote.png', class: 'rewiew-sign')%>
+
+          <article>  Dear Customer:<br/>
+
+            Thank you for giving us the opportunity to serve you. Please comment on our product that you have received "Good or Bad".  We appreciate your business and want to make sure we meet your future expectations and at the same improve our Product.</article>
+          <br/>
+          Sincerely,<br></br> Harold Johnson
+      </div>
+      <!--==========Member==========-->
+      <!--<div class="col-md-3 col-sm-6 member wow fadeInUp" data-wow-delay="0.3s">
+          <div class="row m0 inner">
+              <div class="row m0 image">
+                  <img src="images/team-2.jpg" alt="">
+              </div>
+              <div class="texts row m0">
+                  <h4>Jeffrey Allen</h4>
+                  <h5>Co-Founder and CTO</h5>
+              </div>
+          </div>
+      </div>-->
+      <!--==========Member==========-->
+      <!--<div class="col-md-3 col-sm-6 member wow fadeInUp" data-wow-delay="0.6s">
+          <div class="row m0 inner">
+              <div class="row m0 image">
+                  <img src="images/team-3.jpg" alt="">
+              </div>
+              <div class="texts row m0">
+                  <h4>Sara Mendez</h4>
+                  <h5>Lead Developer, Hacker</h5>
+              </div>
+          </div>
+      </div>-->
+      <!--==========Member==========-->
+      <!--<div class="col-md-3 col-sm-6 member wow fadeInUp" data-wow-delay="0.9s">
+          <div class="row m0 inner">
+              <div class="row m0 image">
+                  <img src="images/team-4.jpg" alt="">
+              </div>
+              <div class="texts row m0">
+                  <h4>Albert Castro</h4>
+                  <h5>3D Designer &amp; Prototyper</h5>
+              </div>
+          </div>
+      </div>-->
+    </div>
+  </div>
+</section>
+
+<!--==========Newsletter==========-->
+<section class="row newsletter">
+  <div class="container">
+    <div class="row section-header wow fadeInUp">
+      <h2>newsletter</h2>
+      <p>Subscribe to our product newsletter </p>
+    </div>
+    <form action="php/subscribe.php" id="subscribeform" class="row newsletter-form" method="post">
+      <div class="input-group">
+        <input type="email" class="form-control" name="email" placeholder="Enter Your Email Address">
+          <span class="input-group-addon">
+          <button type="submit" id="js-subscribe-btn"><%= image_tag('right-angle-white.png')%></button>
+        </span>
+      </div>
+      <div id="js-subscribe-result" class="text-center" data-success-msg="Great! We will update you on our news" data-error-msg="Oops. Something went wrong.">
+        <p>
+          <%= image_tag('protect.png')%>No Spam. We Promise. Unsubscribe anytime.
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!--==========Contact==========-->
+<section class="row contact" id="contact">
+
+  <!-- ================== GOOGLE MAP (Change data-lat & data-lon values) ====================== -->
+  <!-- TIP : More Customization / Color option available in /js/plugins/google-map.js -->
+
+  <div id="mapBox" class="row m0" data-lat="31.614815" data-lon="-94.639137" data-zoom="15"></div>
+  <!-- Flippable Contact Box -->
+  <div class="flip-box-container row m0">
+    <div class="flip-box row m0 wow fadeIn">
+      <!-- Contact Address (front Side) -->
+      <div class="row contact-box flip-box-part">
+        <h2>get in touch</h2>
+        <ul class="nav">
+          <li>
+            <i class="fa fa-map-marker"></i>
+            1326 N UNIVERSITY<br/>
+            Nacogdoches, Texas 75961 USA
+          </li>
+          <li><i class="fa fa-phone"></i>+1(936)462-8348</li>
+          <li><i class="fa fa-envelope"></i>support@nacjac.com</li>
+        </ul>
+        <button class="flip-contact-box btn btn-block">contact us</button>
+      </div>
+      <!-- Contact Form (back Side) -->
+      <div class="row contact-form flip-box-part">
+        <a href="javascript:void(0);" class="js-close-flip">&times;</a>
+        <!-- Contact Form Starts here -->
+        <%= form_tag("contact", method: "post", id: 'phpcontactform') do %>
+            <div class="row">
+              <div class="form-group col-sm-6">
+                <%= text_field_tag('name', nil, class: 'form-control', placeholder: 'Name') %>
+              </div>
+              <div class="form-group col-sm-6">
+                <%= email_field_tag('email', nil,  class: 'form-control', placeholder: 'Email Address') %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= text_field_tag('subject', nil, class: 'form-control', placeholder: 'Subject') %>
+            </div>
+
+            <div class="form-group">
+              <%= text_area_tag('message', nil, class: 'form-control', placeholder: 'Message') %>
+            </div>
+            <button type="submit" id="js-contact-btn" class="btn btn-block">Send Message</button>
+            <div id="js-contact-result" data-success-msg="Form submitted successfully." data-error-msg="Oops. Something went wrong."></div>
+        <% end %>
+        <!-- // End Contact form -->
+      </div>
+      <!-- // End back Side -->
+    </div>
+  </div>
+  <!-- // End Contact Box -->
+</section>
+
+
+<!-- ============================================================
+                        PRODUCT POPUP
+     ============================================================ -->
+
+<% @products.each do |product| %>
+  <div class="row product-box mfp-hide" id="product-choose-<%= product.id %>">
+    <button class="mfp-close custom_close" title="Close (Esc)" type="button">&#215;</button>
+    <div class="product-img-gallery">
+      <%= image_tag(product.photo_url)%>
+    </div>
+    <div class="product-desc">
+      <form method="POST" target="_top" class="choose-form row m0">
+        <div id="js-product-info" class="product-info-<%= product.id %>">
+          <input name="product_id" value="<%= product.id %>" type="hidden"/>
+          <input name="product_title" value="<%= product.title %>" type="hidden"/>
+          <h2 class="edition"><%= product.title %></h2>
+          <h2 class="price">$<%= product.price %></h2>
+          <div class="row m0 description">
+            <p><%= product.notes.html_safe %></p>
+            <p><%= product.description %></p>
+          </div>
+          <div class="choose-options row m0" id="js-choose-color">
+            <div class="option">
+              <h4 class="form-label">Qty</h4>
+              <input type="text" value="1" name="quantity" class="quanity">
+            </div>
+          </div>
+          <div class="submit-area row m0">
+            <span class="btn btn-rounded btn-block">Add to cart</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+<% end %>
+
+<div class="row product-box mfp-hide" id="product-buy">
+  <button class="mfp-close custom_close" title="Close (Esc)" type="button">&#215;</button>
+  <div class="product-img-gallery">
+    <div class="order-desc">
+      <h2 class="edition">Total price, <span class="price">$<span id="total_price"></span></span></h2>
+      <div class="products-selected"></div>
+      <div class="products-not-selected">
+        Choose at least one product
+      </div>
+    </div>
+  </div>
+  <div class="product-desc">
+    <%= render partial: 'items/form' %>
+  </div>
+</div>
+
+<!-- // End Product Popup Section -->

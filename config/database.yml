@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  username: admin
+  password: qwa
+  host: 127.0.0.1
+  encoding: utf8
+  template: template0
+
+production:
+  <<: *default
+  database: nac_jac_production
+
+development:
+  <<: *default
+  database: nac_jac_development
+
+staging:
+  <<: *default
+  database: nac_jac_staging
+
+test:
+  <<: *default
+  database: nac_jac_test
+
+
