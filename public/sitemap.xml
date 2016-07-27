@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>http://www.nacjac.com/</loc>
+  <loc>https://www.nacjac.com/</loc>
   <lastmod>2016-07-25T19:19:20+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://www.nacjac.com/about</loc>
+  <loc>https://www.nacjac.com/about</loc>
   <lastmod>2016-07-25T19:19:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.nacjac.com/terms-of-use</loc>
+  <loc>https://www.nacjac.com/terms-of-use</loc>
   <lastmod>2016-07-25T19:19:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.nacjac.com/privacy-policy</loc>
+  <loc>https://www.nacjac.com/privacy-policy</loc>
   <lastmod>2016-07-25T19:19:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
