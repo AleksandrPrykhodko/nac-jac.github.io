@@ -8,39 +8,36 @@ Product.create(
             id: 1,
             title: 'NAC-JAC TRAY',
             slug: 'nac-jac-tray',
-            notes: '---',
-            description: '$16.99',
+            notes: 'Per Tray',
+            description: '$14.75',
             photo_url: 'products/NAC-JAC-TRAY.jpg',
-            price: 16.99
+            price: 14.75
         },
         {
             id: 2,
             title: 'NAC-JAC FILE FOLDERS',
             slug: 'nac-jac-file-folders',
-            # notes: 'Save & $3.99',
-            notes: '---',
-            # description: '$16.99 & OR Two for $30',
-            description: '$16.99',
+            notes: 'Per Folder',
+            description: '$15.25',
             photo_url: 'products/NAC-JAC-FILE-FOLDERS.jpg',
-            price: 16.99
+            price: 15.25
         },
-        {
-            id: 3,
-            title: 'NAC-JAC TRAYS',
-            slug: 'NAC-JAC-TRAYS',
-            # notes: 'Set of Four --Save $7.99',
-            notes: '---',
-            description: '$60',
-            photo_url: 'products/NAC-JAC-TRAYS.jpg',
-            price: 60.00
-        }#,
         # {
-        #     id: 4,
-        #     title: 'Nac-Jac best Value',
-        #     slug: 'nac-jac-best-value',
-        #     notes: '2 Tray 2 folders',
-        #     description: '$249.00',
-        #     photo_url: 'products/NAC-JAC-BEST-VALUE.jpg',
-        #     price: 249.00
-        # }
+        #     id: 3,
+        #     title: 'NAC-JAC TRAYS',
+        #     slug: 'NAC-JAC-TRAYS',
+        #     notes: '---',
+        #     description: '$60',
+        #     photo_url: 'products/NAC-JAC-TRAYS.jpg',
+        #     price: 60.00
+        # },
+        {
+            id: 4,
+            title: 'NAC-JAC Best Value',
+            slug: 'nac-jac-best-value',
+            notes: '4 Tray 2 folders',
+            description: '$82.50',
+            photo_url: 'products/NAC-JAC-BEST-VALUE.jpg',
+            price: 82.50
+        }
     ])
