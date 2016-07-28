@@ -9,7 +9,7 @@
  Surjith S M / @surjithctly
 
  -------------------------------------------------- */
-var cart = {};
+var cart = new cart();
 
 (function($) {
 
@@ -165,9 +165,8 @@ var cart = {};
         var content = '';
         var data = {};
 
-        $.each(cart, function(_id, obj) {
-          data[_id] = obj['qty'];
-          content += '<div>' + obj['title'] + " : " + obj['qty'] + '</div>';
+        cart.all().forEach(function(item) {
+          content += '<div>' + item.title + " : " + item.qty + '</div>';
         });
         $('.products-selected').html(content);
 
@@ -182,15 +181,9 @@ var cart = {};
           $('.products-not-selected').show();
         }
 
-        $.post({
-          url: '/cart/calculate',
-          data: {'form_data': JSON.stringify(data)}
-        }, function(response) {
-          var total_price = response.total;
-          $('#total_price').text(total_price);
-          $('#total_cart_price').val(total_price);
-          $('#form_data').val(JSON.stringify(response.form_data));
-        });
+        $('#total_price').text(cart.totalPrice());
+        $('#total_cart_price').val(cart.totalPrice());
+        // $('#form_data').val(JSON.stringify(response.form_data));
       },
       close: function() {
         $('#checkout-form').trigger("reset");
