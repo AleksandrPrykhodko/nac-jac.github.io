@@ -286,17 +286,18 @@ li {
   background-color: #bc1060;
 }
 
-.btn-warning {
+.navbar-default .nav li a.btn-warning, .btn-warning {
   text-transform: uppercase;
   font: 500 16px/40px "Poppins", sans-serif;
   padding: 0 35px;
   border-radius: 30px;
+  background-color: #ff6622;
   color: #fff;
   border: none;
 }
 
-.btn-warning:hover, .btn-warning:focus {
-  background: #374048;
+.navbar-default .nav li a.btn-warning:hover, .navbar-default .nav li a.btn-warning:focus {
+  background-color: chocolate;
   color: #fff;
 }
 
@@ -319,12 +320,6 @@ li {
 @media (max-width: 767px) {
   .btn-warning.btn-lg {
     padding: 0 65px;
-  }
-}
-
-@media (max-width: 991px) {
-  .btn-warning {
-    margin-bottom: 35px;
   }
 }
 
