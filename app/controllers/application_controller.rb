@@ -12,8 +12,8 @@ class ApplicationController < ActionController::Base
   protected
 
   def redirect_if_other_domain_name
-    if request.host != 'nacjac.com'
-      redirect_to "#{request.protocol}nacjac.com#{request.fullpath}", :status => :moved_permanently
+    if Rails.env.production? && request.host != 'nacjac.com'
+      redirect_to "https://nacjac.com#{request.fullpath}", :status => :moved_permanently
     end
   end
 end
