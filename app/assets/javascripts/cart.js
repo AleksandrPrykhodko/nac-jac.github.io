@@ -1,22 +1,22 @@
-function cartItem(id, price, title, qty) {
+function CartItem(id, price, title, qty) {
   this.id = id;
   this.price = price;
   this.title = title;
   this.qty = qty;
-};
+}
 
 function cart() {
   this.addProduct = function(id, price, title, qty) {
-    var item = new cartItem(id, price, title, qty);
+    var item = new CartItem(id, price, title, qty);
     this.items.push(item);
     this.saveItems();
   };
 
   this.removeProduct = function(id) {
-    var item = this.items.find( function(el) {
+    var item = this.items.find(function(el) {
       return el.id === id;
     });
-    if (item) {
+    if(item) {
       var index = this.items.indexOf(item);
       this.items.splice(index, 1);
       this.saveItems();
@@ -24,10 +24,10 @@ function cart() {
   };
 
   this.updateProduct = function(id, qty) {
-    var item = this.items.find( function(el) {
+    var item = this.items.find(function(el) {
       return el.id === id;
     });
-    if (item) {
+    if(item) {
       item.qty = qty
       this.saveItems();
     }
@@ -43,7 +43,7 @@ function cart() {
 
   this.loadItems = function() {
     serialized = Cookies.get('cart_items');
-    if (serialized) {
+    if(serialized) {
       this.items = JSON.parse(serialized);
     } else {
       this.items = [];
@@ -55,16 +55,8 @@ function cart() {
     Cookies.remove('cart_items');
   };
 
-  this.totalPrice = function() {
-    var sum = 0;
-    this.items.forEach(function(item) {
-      sum = sum + (item.price * item.qty)
-    });
-    return sum.toFixed(2)
-  };
-
   this.makeFormData = function() {
-    var form_data = {}
+    var form_data = {};
     this.items.forEach(function(item) {
       form_data[item.id] = item.qty
     });
@@ -72,7 +64,7 @@ function cart() {
   };
 
   this.calculatePrice = function(callback) {
-    var price = 0
+    var price = 0;
     $.post({
       url: '/cart/calculate',
       data: {'form_data': JSON.stringify(this.makeFormData())}
@@ -83,5 +75,6 @@ function cart() {
   };
 
   this.loadItems();
-};
+}
+
 
