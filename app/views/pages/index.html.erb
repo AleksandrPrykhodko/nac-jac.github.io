@@ -572,6 +572,7 @@
         <div id="js-product-info" class="product-info-<%= product.id %>">
           <input name="product_id" value="<%= product.id %>" type="hidden"/>
           <input name="product_title" value="<%= product.title %>" type="hidden"/>
+          <input name="product_price" value="<%= product.price %>" type="hidden"/>
           <h2 class="edition"><%= product.title %></h2>
           <h2 class="price">$<%= product.price %></h2>
           <div class="row m0 description">
@@ -597,7 +598,10 @@
   <button class="mfp-close custom_close" title="Close (Esc)" type="button">&#215;</button>
   <div class="product-img-gallery">
     <div class="order-desc">
-      <h2 class="edition">Total price, <span class="price">$<span id="total_price"></span></span></h2>
+      <h2 class="edition">Total price,
+        <span class="price">$<span id="total_price"></span></span>
+        <a href="#" class="btn clear-all-items"><i class="fa fa-trash" aria-hidden="true"></i></a>
+      </h2>
       <div class="products-selected"></div>
       <div class="products-not-selected">
         Choose at least one product

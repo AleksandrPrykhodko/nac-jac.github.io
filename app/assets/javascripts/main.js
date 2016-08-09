@@ -9,7 +9,7 @@
  Surjith S M / @surjithctly
 
  -------------------------------------------------- */
-var cart = {};
+var cart = new cart();
 
 (function($) {
 
@@ -165,9 +165,9 @@ var cart = {};
         var content = '';
         var data = {};
 
-        $.each(cart, function(_id, obj) {
-          data[_id] = obj['qty'];
-          content += '<div>' + obj['title'] + " : " + obj['qty'] + '</div>';
+        cart.all().forEach(function(item, i) {
+          content += '<div><a href="#" item-id="' + item.id + '" class="btn delete-cart-item"><i class="fa fa-times" aria-hidden="true"></i></a>' +
+              item.title + " : " + item.qty + '</div>';
         });
         $('.products-selected').html(content);
 
@@ -182,15 +182,8 @@ var cart = {};
           $('.products-not-selected').show();
         }
 
-        $.post({
-          url: '/cart/calculate',
-          data: {'form_data': JSON.stringify(data)}
-        }, function(response) {
-          var total_price = response.total;
-          $('#total_price').text(total_price);
-          $('#total_cart_price').val(total_price);
-          $('#form_data').val(JSON.stringify(response.form_data));
-        });
+          calculateTotalQty();
+        // $('#form_data').val(JSON.stringify(response.form_data));
       },
       close: function() {
         $('#checkout-form').trigger("reset");
@@ -198,36 +191,76 @@ var cart = {};
     }
   });
 
+    function calculateTotalQty() {
+        // calculate total qty
+        var total_qty = 0;
+        var total_qty_text = '';
+        $.each(cart.items, function(_id, obj) {
+            total_qty += parseInt(obj['qty']);
+        });
+
+        if (total_qty == 1) {
+            total_qty_text = '[ 1 item]';
+        } else if (total_qty > 1) {
+            total_qty_text = '[ ' + total_qty + ' items]';
+        }
+
+        $("#shoppingCartQty").text(total_qty_text);
+        $('#total_price').text('----');
+        cart.calculatePrice(function(totalPrice){
+            $('#total_price').text(totalPrice);
+            $('#total_cart_price').val(totalPrice);
+            $('#form_data').val(JSON.stringify(cart.makeFormData()));
+        });
+    }
+
   $('.submit-area .btn').on('click', function() {
     var parent_box = $(this).parents('.product-box');
 
     var product_id = parent_box.find('[name="product_id"]').val();
     var product_qty = parent_box.find('[name="quantity"]').val();
     var product_title = parent_box.find('[name="product_title"]').val();
+    var product_price = parent_box.find('[name="product_price"]').val();
 
     if(product_qty > 0) {
-      cart[product_id] = {qty: product_qty, title: product_title};
-    } else {
-      delete cart[product_id];
+        var item = cart.items.find( function(el) {
+            return el.id === product_id;
+        });
+        if(item) {
+            cart.updateProduct(product_id, product_qty);
+        }
+        else {
+            cart.addProduct(product_id, product_price, product_title, product_qty);
+        }
     }
 
     $.magnificPopup.close();
 
-    // calculate total qty
-    var total_qty = 0;
-    var total_qty_text = '';
-    $.each(cart, function(_id, obj) {
-      total_qty += parseInt(obj['qty']);
+      calculateTotalQty();
+  });
+
+    $('.products-selected').on('click','.delete-cart-item', function(event){
+        event.preventDefault();
+
+        var id = $(this).attr('item-id');
+        cart.removeProduct(id);
+        $(this).parent().remove();
+        calculateTotalQty();
     });
 
-    if (total_qty == 1) {
-      total_qty_text = '[ 1 item]';
-    } else if (total_qty > 1) {
-      total_qty_text = '[ ' + total_qty + ' items]';
-    }
-
-    $("#shoppingCartQty").text(total_qty_text);
-  });
+    $('.clear-all-items').on('click', function(event){
+        event.preventDefault();
+        cart.clean();
+        $('#btnCheckout').addClass('btn-inactive');
+        $('.products-selected').hide();
+        $('.products-not-selected').show();
+        $('#total_price').text('----');
+        cart.calculatePrice(function(totalPrice){
+            $('#total_price').text(totalPrice);
+            $('#total_cart_price').val(totalPrice);
+        });
+        calculateTotalQty();
+    });
 
 
   /* ---------- MAGNIFIC POPUP ---------- */
@@ -355,6 +388,8 @@ var cart = {};
     });
 
   }
+
+    calculateTotalQty();
 
 
 })(jQuery);

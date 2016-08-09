@@ -23,5 +23,7 @@
 //= require includes/pre-order
 //= require includes/subscribe
 //= require includes/contact
+//= require lib/js.cookie
+//= require cart
 //= require main
 //=* require_tree .
