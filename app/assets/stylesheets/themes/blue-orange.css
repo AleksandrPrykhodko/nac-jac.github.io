@@ -293,7 +293,7 @@ body.home header .navbar {
   color: #d02630;
 }
 
-.tech-specs-row ul li {
+.tech-specs-row ul li, .tech-specs-row td {
   color: #82898f;
 }
 
