@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def redirect_if_other_domain_name
+    return unless Rails.env.production?
     logger.info "Domain name: #{request.host}"
     if request.host != 'nacjac.com'
       redirect_to "#{request.protocol}nacjac.com#{request.fullpath}", :status => :moved_permanently
