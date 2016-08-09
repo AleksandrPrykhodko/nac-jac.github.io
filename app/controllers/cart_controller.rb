@@ -66,7 +66,7 @@ class CartController < ApplicationController
     total_amount = 0
 
     begin
-      Product.find(form_data.keys).each do |product|
+      Product.find(form_data.keys.map(&:to_i)).each do |product|
         qty_s = form_data[product.id.to_s]
 
         if qty_s && qty_s.to_i >= 0
