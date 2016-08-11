@@ -74,8 +74,16 @@ header.row .navbar.is-scrolling {
   box-shadow: 0 2px 42px rgba(0, 0, 0, 0.1);
 }
 
-header.row .navbar.is-scrolling .nav li a {
+header.row .navbar.is-scrolling .nav li a,
+header.row .navbar.is-scrolling .nav li a.btn-warning:hover {
   color: #8f969d;
+}
+
+header.row .navbar.is-scrolling .nav li a.btn-warning:focus,
+header.row .navbar.is-scrolling .nav li a.btn-warning,
+header.row .navbar .nav li a.btn-warning:focus,
+header.row .navbar .nav li a.btn-warning{
+    color: #fff;
 }
 
 header.row .navbar.is-scrolling .nav li.active a {
@@ -287,7 +295,7 @@ body.home header .navbar {
   color: #d02630;
 }
 
-.tech-specs-row ul li {
+.tech-specs-row ul li, .tech-specs-row td {
   color: #82898f;
 }
 
