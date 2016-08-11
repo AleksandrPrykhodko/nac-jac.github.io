@@ -166,7 +166,7 @@ var cart = new cart();
         var data = {};
 
         cart.all().forEach(function(item, i) {
-          content += '<div><a href="#" item-id="' + item.id + '" class="btn delete-cart-item"><i class="fa fa-times" aria-hidden="true"></i></a>' +
+          content += '<div><a href="#" item-id="' + item.id + '" class="btn delete-cart-item"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>' +
               item.title + " : " + item.qty + '</div>';
         });
         $('.products-selected').html(content);
