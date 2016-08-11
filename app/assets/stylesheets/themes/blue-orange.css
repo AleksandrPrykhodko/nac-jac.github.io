@@ -75,12 +75,14 @@ header.row .navbar.is-scrolling {
 }
 
 header.row .navbar.is-scrolling .nav li a,
-header.row .navbar.is-scrolling .nav li a.btn-warning:focus,
 header.row .navbar.is-scrolling .nav li a.btn-warning:hover {
   color: #8f969d;
 }
 
-header.row .navbar.is-scrolling .nav li a.btn-warning {
+header.row .navbar.is-scrolling .nav li a.btn-warning:focus,
+header.row .navbar.is-scrolling .nav li a.btn-warning,
+header.row .navbar .nav li a.btn-warning:focus,
+header.row .navbar .nav li a.btn-warning{
     color: #fff;
 }
 
