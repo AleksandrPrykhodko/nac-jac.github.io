@@ -24,7 +24,7 @@ module NacJacGithubIo
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.paths << Rails.root.join('/app/assets/fonts')
 
-    ActiveMerchant::Billing::Base.mode = :test
+    ActiveMerchant::Billing::Base.mode = :test unless Rails.env.production?
     ::GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(
         :login => ENV['PAYPAL_MERCHANT_LOGIN'],
         :password => ENV['PAYPAL_MERCHANT_PASSWORD'],
